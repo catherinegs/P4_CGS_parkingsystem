@@ -3187,3 +3187,954 @@ java.lang.Error: SWT Resource was not properly disposed
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-17 21:48:01.140
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.uzYYECDr
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-17 21:48:01.140
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.uzYYECDr
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-17 21:48:01.141
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-17 21:48:01.141
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.uzYYECDr => OK
+!SESSION 2022-06-07 19:38:21.899 -----------------------------------------------
+eclipse.buildId=4.20.0.I20210611-1600
+java.version=18.0.1.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/catherinegourdin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/catherinegourdin/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 0 2022-06-07 19:38:35.589
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2022-06-07 19:38:35.589
+!MESSAGE Cannot bind to an undefined command: plug-in='org.light.adt', id='org.light.adt.commands.sampleCommand'
+
+!ENTRY org.eclipse.jface 2 0 2022-06-07 19:38:36.776
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-06-07 19:38:36.776
+!MESSAGE A conflict occurred for COMMAND+SHIFT+F10:
+Binding(COMMAND+SHIFT+F10,
+	ParameterizedCommand(Command(org.jboss.tools.common.ui.RegisterAsService,Register As Service,
+		Adds class name to META-INF/services/%serviceType% file after service type is selected in the dialog from types extended and implemented by the class.,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@674cd2da,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+F10,
+	ParameterizedCommand(Command(org.eclipse.ui.window.showSystemMenu,Show System Menu,
+		Show the system menu,
+		Category(org.eclipse.ui.category.window,Window,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@686279e0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-06-07 19:38:36.776
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6b28d4e4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@41cfcbb5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-06-07 19:38:36.776
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@40941b54,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b42d7df,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY com.genuitec.eclipse.code.ui 1 0 2022-06-07 19:38:37.352
+!MESSAGE CodeMix Engine will be started momentarily to support development activities
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:42.464
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:42.464
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@7895525a[org.springframework.tooling.boot.ls:1.22.0.202009151440(id=1705)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:42.466
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:42.511
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:44.044
+!MESSAGE Boot LS startup time from start to initialized: 1567ms
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:38:44.088
+!MESSAGE Cannot find a common class for org/eclipse/core/runtime/CoreException and java/io/IOException
+
+!ENTRY com.genuitec.eclipse.code.patches 4 0 2022-06-07 19:38:44.088
+!MESSAGE Patches instrumentation extension codemix.fix.js.compare (Fix Comparison of JavaScript Manager) has failed to weave class org.eclipse.compare.internal.CompareUIPlugin. Extension will be disabled. Error: java.lang.ClassNotFoundException: org.eclipse.core.runtime.CoreException
+!STACK 0
+java.lang.RuntimeException: java.lang.ClassNotFoundException: org.eclipse.core.runtime.CoreException
+	at com.genuitec.eclipse.code.core.patches.AbstractWeaverExtension$1.getCommonSuperClass(AbstractWeaverExtension.java:73)
+	at org.objectweb.asm.SymbolTable.addMergedType(SymbolTable.java:1202)
+	at org.objectweb.asm.Frame.merge(Frame.java:1299)
+	at org.objectweb.asm.Frame.merge(Frame.java:1213)
+	at org.objectweb.asm.MethodWriter.computeAllFrames(MethodWriter.java:1610)
+	at org.objectweb.asm.MethodWriter.visitMaxs(MethodWriter.java:1546)
+	at org.objectweb.asm.tree.MethodNode.accept(MethodNode.java:769)
+	at org.objectweb.asm.tree.MethodNode.accept(MethodNode.java:649)
+	at org.objectweb.asm.tree.ClassNode.accept(ClassNode.java:452)
+	at com.genuitec.eclipse.code.core.patches.AbstractWeaverExtension.weave(AbstractWeaverExtension.java:92)
+	at com.genuitec.eclipse.code.patches.internal.InstrumentationManager$WeavingExtension.weave(InstrumentationManager.java:404)
+	at com.genuitec.eclipse.code.patches.internal.InstrumentationManager.weave(InstrumentationManager.java:307)
+	at com.genuitec.eclipse.code.patches.internal.InstrumentationWeaver.weave(InstrumentationWeaver.java:15)
+	at org.eclipse.osgi.internal.weaving.WovenClassImpl.call(WovenClassImpl.java:187)
+	at org.eclipse.osgi.internal.weaving.WovenClassImpl.call(WovenClassImpl.java:1)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.notifyHookPrivileged(ServiceRegistry.java:1338)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.notifyHooksPrivileged(ServiceRegistry.java:1311)
+	at org.eclipse.osgi.internal.weaving.WovenClassImpl.callHooks(WovenClassImpl.java:252)
+	at org.eclipse.osgi.internal.weaving.WeavingHookConfigurator.processClass(WeavingHookConfigurator.java:80)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.processClass(ClasspathManager.java:737)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.defineClass(ClasspathManager.java:708)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findClassImpl(ClasspathManager.java:641)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:609)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:589)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:568)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:401)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:480)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:796)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:749)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1028)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:511)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:572)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:401)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:170)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at org.springframework.ide.eclipse.boot.dash.cf.BootDashInjections.applyBeanDefinitions(BootDashInjections.java:54)
+	at org.springframework.ide.eclipse.boot.dash.di.EclipseBeanLoader.loadFromExtensionPoint(EclipseBeanLoader.java:34)
+	at org.springframework.ide.eclipse.boot.dash.model.DefaultBootDashModelContext.create(DefaultBootDashModelContext.java:67)
+	at org.springframework.ide.eclipse.boot.dash.BootDashActivator.lambda$0(BootDashActivator.java:136)
+	at com.google.common.base.Suppliers$NonSerializableMemoizingSupplier.get(Suppliers.java:167)
+	at org.springframework.ide.eclipse.boot.dash.BootDashActivator.getInjections(BootDashActivator.java:149)
+	at org.springframework.ide.eclipse.boot.dash.remoteapps.RemoteBootAppsDataHolder.getDefault(RemoteBootAppsDataHolder.java:51)
+	at org.springframework.tooling.boot.ls.DelegatingStreamConnectionProvider.getAllRemoteApps(DelegatingStreamConnectionProvider.java:198)
+	at org.springframework.tooling.boot.ls.DelegatingStreamConnectionProvider.sendConfiguration(DelegatingStreamConnectionProvider.java:187)
+	at org.springframework.tooling.boot.ls.DelegatingStreamConnectionProvider.handleMessage(DelegatingStreamConnectionProvider.java:124)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:265)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.core.runtime.CoreException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:488)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at com.genuitec.eclipse.code.core.patches.AbstractWeaverExtension$1.getCommonSuperClass(AbstractWeaverExtension.java:69)
+	... 61 more
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:44.255
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.tWqXznnPisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:44.258
+!MESSAGE Creating project sorter...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:44.259
+!MESSAGE Creating project sorter... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:44.262
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:44.265
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:44.265
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:44.266
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.tWqXznnP => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:44.353
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-06-07 19:38:44.359
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-06-07 19:38:44.359
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:44.389
+!MESSAGE classpath=98 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:44.393
+!MESSAGE buffering callback sts4.classpath.tWqXznnP parkit false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:44.393
+!MESSAGE executing callback sts4.classpath.tWqXznnP 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:44.470
+!MESSAGE executing callback sts4.classpath.tWqXznnP SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2022-06-07 19:38:45.124
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.foundation.ui, page: org.jboss.tools.foundation.ui.internal.credentials.CredentialPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2022-06-07 19:38:45.125
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.usage, page: org.jboss.tools.usage.analytics.preferences.UsageAnalyticsPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2022-06-07 19:38:45.125
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.runtime.ui, page: org.jboss.tools.runtime.preferences.RuntimePreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2022-06-07 19:38:45.126
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.common.jdt.debug.ui, page: org.jboss.tools.common.jdt.debug.ui.preferences.RemoteDebugPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2022-06-07 19:38:45.127
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.maven.ui, page: org.jboss.tools.maven.ui.preferences.ConfiguratorPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2022-06-07 19:38:45.127
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.maven.ui, page: org.jboss.tools.maven.ui.preferences.RemoteRepositoriesPreferencePage)
+
+!ENTRY org.eclipse.ui 2 2 2022-06-07 19:38:45.128
+!MESSAGE Invalid preference category path: org.jboss.tools.common.model.ui.MainPreferencePage (bundle: org.jboss.tools.openshift.ui, page: org.jboss.tools.openshift.ui.preferences.OpenShiftPreferencePage)
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2022-06-07 19:38:45.187
+!MESSAGE Verifying CodeMix Engine runtime integrity...
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2022-06-07 19:38:45.198
+!MESSAGE IntegrityCheck: Artifacts located at: [/Applications/Eclipse.app/Contents/Eclipse/artifacts.xml]
+
+!ENTRY com.genuitec.eclipse.code.core 1 0 2022-06-07 19:38:45.224
+!MESSAGE Integrity check PASSED
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:38:45.659
+!MESSAGE Unable to make field private final int java.lang.ProcessImpl.pid accessible: module java.base does not "opens java.lang" to unnamed module @10e5471d
+!STACK 0
+java.lang.reflect.InaccessibleObjectException: Unable to make field private final int java.lang.ProcessImpl.pid accessible: module java.base does not "opens java.lang" to unnamed module @10e5471d
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at com.genuitec.eclipse.code.engine.EmbeddedEngine.run(EmbeddedEngine.java:74)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.run(EngineManager.java:231)
+	at com.genuitec.eclipse.code.core.engine.app.EngineManager.initialize(EngineManager.java:108)
+	at com.genuitec.eclipse.code.core.engine.EngineService.start(EngineService.java:193)
+	at com.genuitec.eclipse.code.ui.CodeService.start(CodeService.java:373)
+	at com.genuitec.eclipse.code.ui.EngineStartupHandler$1.run(EngineStartupHandler.java:124)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 2 0 2022-06-07 19:38:45.716
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2022-06-07 19:38:45.716
+!MESSAGE Cannot bind to an undefined command: plug-in='org.light.adt', id='org.light.adt.commands.sampleCommand'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:46.278
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:46.280
+!MESSAGE classpath=98 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:46.283
+!MESSAGE buffering callback sts4.classpath.tWqXznnP parkit false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:46.283
+!MESSAGE executing callback sts4.classpath.tWqXznnP 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 19:38:46.299
+!MESSAGE executing callback sts4.classpath.tWqXznnP SUCCESS [done]
+
+!ENTRY com.genuitec.eclipse.code.livechat.core 4 0 2022-06-07 19:38:47.050
+!MESSAGE Received status code [404] trying to synchronize thread
+!STACK 0
+java.io.IOException: Received status code [404] trying to synchronize thread
+	at com.genuitec.eclipse.code.livechat.client.LiveChatCometdClient.isAgentAvailable(LiveChatCometdClient.java:926)
+	at com.genuitec.eclipse.code.livechat.core.ThreadService.isAgentAvailable(ThreadService.java:328)
+	at com.genuitec.eclipse.code.livechat.ui.LiveChatHandler.isAgentAvailable(LiveChatHandler.java:51)
+	at com.genuitec.eclipse.code.ui.CodeUI.isLiveChatAgentAvailable(CodeUI.java:692)
+	at com.genuitec.eclipse.code.ui.welcome.CodeWelcomeStartup$8.run(CodeWelcomeStartup.java:677)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.livechat.core 4 0 2022-06-07 19:38:47.070
+!MESSAGE Received status code [404] trying to synchronize thread
+!STACK 0
+java.io.IOException: Received status code [404] trying to synchronize thread
+	at com.genuitec.eclipse.code.livechat.client.LiveChatCometdClient.isAgentAvailable(LiveChatCometdClient.java:926)
+	at com.genuitec.eclipse.code.livechat.core.ThreadService.isAgentAvailable(ThreadService.java:328)
+	at com.genuitec.eclipse.code.livechat.ui.LiveChatHandler.isAgentAvailable(LiveChatHandler.java:51)
+	at com.genuitec.eclipse.code.ui.CodeUI.isLiveChatAgentAvailable(CodeUI.java:692)
+	at com.genuitec.eclipse.code.ui.problem.PopupHandler$1.run(PopupHandler.java:50)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 2 2 2022-06-07 19:38:50.035
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:38:50.788
+!MESSAGE Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+!STACK 0
+java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at com.google.gson.internal.reflect.UnsafeReflectionAccessor.makeAccessible(UnsafeReflectionAccessor.java:44)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:159)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory.create(CollectionTypeAdapterFactory.java:53)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.Gson.fromJson(Gson.java:926)
+	at com.google.gson.Gson.fromJson(Gson.java:994)
+	at com.genuitec.eclipse.code.core.engine.JsonUtil.fromJsonElement(JsonUtil.java:137)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RequestInfo.finish(SessionHandler.java:158)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RPCObjectType$3.process(SessionHandler.java:1095)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler.handleRequest(SessionHandler.java:824)
+	at com.genuitec.eclipse.code.core.engine.EngineService.handleMessage(EngineService.java:976)
+	at com.genuitec.eclipse.code.core.engine.EngineServerEndpoint.onMessage(EngineServerEndpoint.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:534)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.access$100(AnnotatedEndpoint.java:87)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint$WholeHandler$1.onMessage(AnnotatedEndpoint.java:633)
+	at org.glassfish.tyrus.core.TyrusSession.notifyMessageHandlers(TyrusSession.java:576)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onPartialMessage(TyrusEndpointWrapper.java:977)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onFragment(TyrusWebSocket.java:190)
+	at org.glassfish.tyrus.core.frame.TextFrame.respond(TextFrame.java:136)
+	at org.glassfish.tyrus.core.ProtocolHandler.process(ProtocolHandler.java:807)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusReadHandler.handle(TyrusWebSocketEngine.java:562)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter$ProcessTask.execute(GrizzlyServerFilter.java:379)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:114)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:91)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter.handleRead(GrizzlyServerFilter.java:215)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:526)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:38:50.861
+!MESSAGE Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+!STACK 0
+java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at com.google.gson.internal.reflect.UnsafeReflectionAccessor.makeAccessible(UnsafeReflectionAccessor.java:44)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:159)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory.create(CollectionTypeAdapterFactory.java:53)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.Gson.fromJson(Gson.java:926)
+	at com.google.gson.Gson.fromJson(Gson.java:994)
+	at com.genuitec.eclipse.code.core.engine.JsonUtil.fromJsonElement(JsonUtil.java:137)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RequestInfo.finish(SessionHandler.java:158)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RPCObjectType$3.process(SessionHandler.java:1095)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler.handleRequest(SessionHandler.java:824)
+	at com.genuitec.eclipse.code.core.engine.EngineService.handleMessage(EngineService.java:976)
+	at com.genuitec.eclipse.code.core.engine.EngineServerEndpoint.onMessage(EngineServerEndpoint.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:534)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.access$100(AnnotatedEndpoint.java:87)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint$WholeHandler$1.onMessage(AnnotatedEndpoint.java:633)
+	at org.glassfish.tyrus.core.TyrusSession.notifyMessageHandlers(TyrusSession.java:576)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onPartialMessage(TyrusEndpointWrapper.java:977)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onFragment(TyrusWebSocket.java:190)
+	at org.glassfish.tyrus.core.frame.TextFrame.respond(TextFrame.java:136)
+	at org.glassfish.tyrus.core.ProtocolHandler.process(ProtocolHandler.java:807)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusReadHandler.handle(TyrusWebSocketEngine.java:562)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter$ProcessTask.execute(GrizzlyServerFilter.java:379)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:114)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:91)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter.handleRead(GrizzlyServerFilter.java:215)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:526)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:38:54.768
+!MESSAGE Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+!STACK 0
+java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at com.google.gson.internal.reflect.UnsafeReflectionAccessor.makeAccessible(UnsafeReflectionAccessor.java:44)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:159)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory.create(CollectionTypeAdapterFactory.java:53)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.Gson.fromJson(Gson.java:926)
+	at com.google.gson.Gson.fromJson(Gson.java:994)
+	at com.genuitec.eclipse.code.core.engine.JsonUtil.fromJsonElement(JsonUtil.java:137)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RequestInfo.finish(SessionHandler.java:158)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RPCObjectType$3.process(SessionHandler.java:1095)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler.handleRequest(SessionHandler.java:824)
+	at com.genuitec.eclipse.code.core.engine.EngineService.handleMessage(EngineService.java:976)
+	at com.genuitec.eclipse.code.core.engine.EngineServerEndpoint.onMessage(EngineServerEndpoint.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:534)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.access$100(AnnotatedEndpoint.java:87)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint$WholeHandler$1.onMessage(AnnotatedEndpoint.java:633)
+	at org.glassfish.tyrus.core.TyrusSession.notifyMessageHandlers(TyrusSession.java:576)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onPartialMessage(TyrusEndpointWrapper.java:977)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onFragment(TyrusWebSocket.java:190)
+	at org.glassfish.tyrus.core.frame.TextFrame.respond(TextFrame.java:136)
+	at org.glassfish.tyrus.core.ProtocolHandler.process(ProtocolHandler.java:807)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusReadHandler.handle(TyrusWebSocketEngine.java:562)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter$ProcessTask.execute(GrizzlyServerFilter.java:379)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:114)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:91)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter.handleRead(GrizzlyServerFilter.java:215)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:526)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:39:08.807
+!MESSAGE Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+!STACK 0
+java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at com.google.gson.internal.reflect.UnsafeReflectionAccessor.makeAccessible(UnsafeReflectionAccessor.java:44)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:159)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory.create(CollectionTypeAdapterFactory.java:53)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.Gson.fromJson(Gson.java:926)
+	at com.google.gson.Gson.fromJson(Gson.java:994)
+	at com.genuitec.eclipse.code.core.engine.JsonUtil.fromJsonElement(JsonUtil.java:137)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RequestInfo.finish(SessionHandler.java:158)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RPCObjectType$3.process(SessionHandler.java:1095)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler.handleRequest(SessionHandler.java:824)
+	at com.genuitec.eclipse.code.core.engine.EngineService.handleMessage(EngineService.java:976)
+	at com.genuitec.eclipse.code.core.engine.EngineServerEndpoint.onMessage(EngineServerEndpoint.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:534)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.access$100(AnnotatedEndpoint.java:87)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint$WholeHandler$1.onMessage(AnnotatedEndpoint.java:633)
+	at org.glassfish.tyrus.core.TyrusSession.notifyMessageHandlers(TyrusSession.java:576)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onPartialMessage(TyrusEndpointWrapper.java:977)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onFragment(TyrusWebSocket.java:190)
+	at org.glassfish.tyrus.core.frame.TextFrame.respond(TextFrame.java:136)
+	at org.glassfish.tyrus.core.ProtocolHandler.process(ProtocolHandler.java:807)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusReadHandler.handle(TyrusWebSocketEngine.java:562)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter$ProcessTask.execute(GrizzlyServerFilter.java:379)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:114)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:91)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter.handleRead(GrizzlyServerFilter.java:215)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:526)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:40:49.794
+!MESSAGE Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+!STACK 0
+java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at com.google.gson.internal.reflect.UnsafeReflectionAccessor.makeAccessible(UnsafeReflectionAccessor.java:44)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:159)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory.create(CollectionTypeAdapterFactory.java:53)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.Gson.fromJson(Gson.java:926)
+	at com.google.gson.Gson.fromJson(Gson.java:994)
+	at com.genuitec.eclipse.code.core.engine.JsonUtil.fromJsonElement(JsonUtil.java:137)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RequestInfo.finish(SessionHandler.java:158)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RPCObjectType$3.process(SessionHandler.java:1095)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler.handleRequest(SessionHandler.java:824)
+	at com.genuitec.eclipse.code.core.engine.EngineService.handleMessage(EngineService.java:976)
+	at com.genuitec.eclipse.code.core.engine.EngineServerEndpoint.onMessage(EngineServerEndpoint.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:534)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.access$100(AnnotatedEndpoint.java:87)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint$WholeHandler$1.onMessage(AnnotatedEndpoint.java:633)
+	at org.glassfish.tyrus.core.TyrusSession.notifyMessageHandlers(TyrusSession.java:576)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onPartialMessage(TyrusEndpointWrapper.java:977)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onFragment(TyrusWebSocket.java:190)
+	at org.glassfish.tyrus.core.frame.TextFrame.respond(TextFrame.java:136)
+	at org.glassfish.tyrus.core.ProtocolHandler.process(ProtocolHandler.java:807)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusReadHandler.handle(TyrusWebSocketEngine.java:562)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter$ProcessTask.execute(GrizzlyServerFilter.java:379)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:114)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:91)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter.handleRead(GrizzlyServerFilter.java:215)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:526)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:40:50.161
+!MESSAGE Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+!STACK 0
+java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at com.google.gson.internal.reflect.UnsafeReflectionAccessor.makeAccessible(UnsafeReflectionAccessor.java:44)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:159)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory.create(CollectionTypeAdapterFactory.java:53)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.Gson.fromJson(Gson.java:926)
+	at com.google.gson.Gson.fromJson(Gson.java:994)
+	at com.genuitec.eclipse.code.core.engine.JsonUtil.fromJsonElement(JsonUtil.java:137)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RequestInfo.finish(SessionHandler.java:158)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RPCObjectType$3.process(SessionHandler.java:1095)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler.handleRequest(SessionHandler.java:824)
+	at com.genuitec.eclipse.code.core.engine.EngineService.handleMessage(EngineService.java:976)
+	at com.genuitec.eclipse.code.core.engine.EngineServerEndpoint.onMessage(EngineServerEndpoint.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:534)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.access$100(AnnotatedEndpoint.java:87)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint$WholeHandler$1.onMessage(AnnotatedEndpoint.java:633)
+	at org.glassfish.tyrus.core.TyrusSession.notifyMessageHandlers(TyrusSession.java:576)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onPartialMessage(TyrusEndpointWrapper.java:977)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onFragment(TyrusWebSocket.java:190)
+	at org.glassfish.tyrus.core.frame.TextFrame.respond(TextFrame.java:136)
+	at org.glassfish.tyrus.core.ProtocolHandler.process(ProtocolHandler.java:807)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusReadHandler.handle(TyrusWebSocketEngine.java:562)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter$ProcessTask.execute(GrizzlyServerFilter.java:379)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:114)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:91)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter.handleRead(GrizzlyServerFilter.java:215)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:526)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:40:54.772
+!MESSAGE Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+!STACK 0
+java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at com.google.gson.internal.reflect.UnsafeReflectionAccessor.makeAccessible(UnsafeReflectionAccessor.java:44)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:159)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory.create(CollectionTypeAdapterFactory.java:53)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.Gson.fromJson(Gson.java:926)
+	at com.google.gson.Gson.fromJson(Gson.java:994)
+	at com.genuitec.eclipse.code.core.engine.JsonUtil.fromJsonElement(JsonUtil.java:137)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RequestInfo.finish(SessionHandler.java:158)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RPCObjectType$3.process(SessionHandler.java:1095)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler.handleRequest(SessionHandler.java:824)
+	at com.genuitec.eclipse.code.core.engine.EngineService.handleMessage(EngineService.java:976)
+	at com.genuitec.eclipse.code.core.engine.EngineServerEndpoint.onMessage(EngineServerEndpoint.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:534)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.access$100(AnnotatedEndpoint.java:87)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint$WholeHandler$1.onMessage(AnnotatedEndpoint.java:633)
+	at org.glassfish.tyrus.core.TyrusSession.notifyMessageHandlers(TyrusSession.java:576)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onPartialMessage(TyrusEndpointWrapper.java:977)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onFragment(TyrusWebSocket.java:190)
+	at org.glassfish.tyrus.core.frame.TextFrame.respond(TextFrame.java:136)
+	at org.glassfish.tyrus.core.ProtocolHandler.process(ProtocolHandler.java:807)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusReadHandler.handle(TyrusWebSocketEngine.java:562)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter$ProcessTask.execute(GrizzlyServerFilter.java:379)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:114)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:91)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter.handleRead(GrizzlyServerFilter.java:215)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:526)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:41:08.808
+!MESSAGE Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+!STACK 0
+java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.lang.String java.io.File.path accessible: module java.base does not "opens java.io" to unnamed module @16b035f1
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at com.google.gson.internal.reflect.UnsafeReflectionAccessor.makeAccessible(UnsafeReflectionAccessor.java:44)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:159)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:117)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:166)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:102)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory.create(CollectionTypeAdapterFactory.java:53)
+	at com.google.gson.Gson.getAdapter(Gson.java:458)
+	at com.google.gson.Gson.fromJson(Gson.java:926)
+	at com.google.gson.Gson.fromJson(Gson.java:994)
+	at com.genuitec.eclipse.code.core.engine.JsonUtil.fromJsonElement(JsonUtil.java:137)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RequestInfo.finish(SessionHandler.java:158)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler$RPCObjectType$3.process(SessionHandler.java:1095)
+	at com.genuitec.eclipse.code.core.engine.SessionHandler.handleRequest(SessionHandler.java:824)
+	at com.genuitec.eclipse.code.core.engine.EngineService.handleMessage(EngineService.java:976)
+	at com.genuitec.eclipse.code.core.engine.EngineServerEndpoint.onMessage(EngineServerEndpoint.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:534)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.access$100(AnnotatedEndpoint.java:87)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint$WholeHandler$1.onMessage(AnnotatedEndpoint.java:633)
+	at org.glassfish.tyrus.core.TyrusSession.notifyMessageHandlers(TyrusSession.java:576)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onPartialMessage(TyrusEndpointWrapper.java:977)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onFragment(TyrusWebSocket.java:190)
+	at org.glassfish.tyrus.core.frame.TextFrame.respond(TextFrame.java:136)
+	at org.glassfish.tyrus.core.ProtocolHandler.process(ProtocolHandler.java:807)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusReadHandler.handle(TyrusWebSocketEngine.java:562)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter$ProcessTask.execute(GrizzlyServerFilter.java:379)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:114)
+	at org.glassfish.tyrus.container.grizzly.client.TaskProcessor.processTask(TaskProcessor.java:91)
+	at org.glassfish.tyrus.container.grizzly.server.GrizzlyServerFilter.handleRead(GrizzlyServerFilter.java:215)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:526)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:44:49.727
+!MESSAGE <null>
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.requestInstalledExtensions(ExtensionsService.java:661)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.access$15(ExtensionsService.java:657)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService$2.run(ExtensionsService.java:849)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:44:50.110
+!MESSAGE <null>
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.requestInstalledExtensions(ExtensionsService.java:661)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.access$15(ExtensionsService.java:657)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService$2.run(ExtensionsService.java:849)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:44:54.727
+!MESSAGE <null>
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.requestInstalledExtensions(ExtensionsService.java:661)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.access$15(ExtensionsService.java:657)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService$2.run(ExtensionsService.java:849)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 19:45:08.755
+!MESSAGE <null>
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.requestInstalledExtensions(ExtensionsService.java:661)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.access$15(ExtensionsService.java:657)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService$2.run(ExtensionsService.java:849)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:04:31.172
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:04:31.174
+!MESSAGE classpath=98 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:04:31.175
+!MESSAGE buffering callback sts4.classpath.tWqXznnP parkit false 98
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:04:31.175
+!MESSAGE executing callback sts4.classpath.tWqXznnP 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:04:31.180
+!MESSAGE executing callback sts4.classpath.tWqXznnP SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-06-07 20:04:40.415
+!MESSAGE Could not determine source level, using default 1.5
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-06-07 20:04:40.415
+!MESSAGE Could not determine target level, using default 1.5
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:04:40.563
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:04:40.565
+!MESSAGE classpath=98 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:04:40.566
+!MESSAGE buffering callback sts4.classpath.tWqXznnP parkit false 98
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:04:40.567
+!MESSAGE executing callback sts4.classpath.tWqXznnP 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:04:40.573
+!MESSAGE executing callback sts4.classpath.tWqXznnP SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:05:51.264
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:05:51.266
+!MESSAGE classpath=98 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:05:51.268
+!MESSAGE buffering callback sts4.classpath.tWqXznnP parkit false 98
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:05:51.268
+!MESSAGE executing callback sts4.classpath.tWqXznnP 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:05:51.271
+!MESSAGE executing callback sts4.classpath.tWqXznnP SUCCESS [done]
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-06-07 20:05:54.287
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Font.<init>(Font.java:180)
+	at org.eclipse.ui.internal.dialogs.FilteredPreferenceDialog.createTitleArea(FilteredPreferenceDialog.java:815)
+	at org.eclipse.jface.preference.PreferenceDialog.createDialogArea(PreferenceDialog.java:406)
+	at org.eclipse.jface.dialogs.Dialog.createContents(Dialog.java:767)
+	at org.eclipse.jface.preference.PreferenceDialog.access$5(PreferenceDialog.java:1)
+	at org.eclipse.jface.preference.PreferenceDialog.lambda$0(PreferenceDialog.java:346)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.jface.preference.PreferenceDialog.createContents(PreferenceDialog.java:345)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1094)
+	at org.eclipse.ui.internal.dialogs.PropertyDialog.createDialogOn(PropertyDialog.java:84)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.createDialog(PropertyDialogAction.java:169)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:151)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4441)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1512)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1535)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1520)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1324)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4227)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3837)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:05:57.520
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:05:57.522
+!MESSAGE classpath=98 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:05:57.523
+!MESSAGE buffering callback sts4.classpath.tWqXznnP parkit false 98
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:05:57.523
+!MESSAGE executing callback sts4.classpath.tWqXznnP 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-07 20:05:57.526
+!MESSAGE executing callback sts4.classpath.tWqXznnP SUCCESS [done]
