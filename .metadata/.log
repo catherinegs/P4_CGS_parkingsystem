@@ -6274,3 +6274,89 @@ java.lang.reflect.InaccessibleObjectException: Unable to make field private fina
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:591)
 	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:571)
 	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 22:45:30.109
+!MESSAGE <null>
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.requestInstalledExtensions(ExtensionsService.java:661)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.access$15(ExtensionsService.java:657)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService$2.run(ExtensionsService.java:849)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 22:45:35.112
+!MESSAGE <null>
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.requestInstalledExtensions(ExtensionsService.java:661)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.access$15(ExtensionsService.java:657)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService$2.run(ExtensionsService.java:849)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2022-06-07 22:45:48.495
+!MESSAGE <null>
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.requestInstalledExtensions(ExtensionsService.java:661)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService.access$15(ExtensionsService.java:657)
+	at com.genuitec.eclipse.code.core.extensions.ExtensionsService$2.run(ExtensionsService.java:849)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.code.ui 4 0 2022-06-07 23:13:20.752
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in com.genuitec.eclipse.code.ui.CodeUI.stop() of bundle com.genuitec.eclipse.code.ui.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:890)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1888)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1763)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NullPointerException: Cannot enter synchronized block because "this.supportedLanguages" is null
+	at com.genuitec.eclipse.code.ui.languages.LanguagesService.storeSupportedLanguages(LanguagesService.java:325)
+	at com.genuitec.eclipse.code.ui.CodeService.stop(CodeService.java:380)
+	at com.genuitec.eclipse.code.ui.CodeUI.stop(CodeUI.java:304)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:870)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:862)
+	... 13 more
+Root exception:
+java.lang.NullPointerException: Cannot enter synchronized block because "this.supportedLanguages" is null
+	at com.genuitec.eclipse.code.ui.languages.LanguagesService.storeSupportedLanguages(LanguagesService.java:325)
+	at com.genuitec.eclipse.code.ui.CodeService.stop(CodeService.java:380)
+	at com.genuitec.eclipse.code.ui.CodeUI.stop(CodeUI.java:304)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:870)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:862)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1888)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1763)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.core.jobs 2 2 2022-06-07 23:13:22.414
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.genuitec.eclipse.code.ui.console.DebugConsole$InputReadJob
