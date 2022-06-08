@@ -1,0 +1,22 @@
+2022-06-08 21:10:19 [main] INFO  App:10 - Initializing Parking System
+2022-06-08 21:10:19 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-06-08 21:11:21 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-06-08 21:11:22 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-06-08 21:11:22 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-06-08 21:11:22 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-06-08 21:11:38 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-06-08 21:11:38 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-06-08 21:11:38 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-06-08 21:11:38 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-06-08 21:11:38 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-06-08 21:12:38 [main] INFO  App:10 - Initializing Parking System
+2022-06-08 21:12:38 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-06-08 21:12:50 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-06-08 21:12:51 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-06-08 21:12:51 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-06-08 21:12:51 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-06-08 21:12:55 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-06-08 21:12:55 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-06-08 21:12:55 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-06-08 21:12:55 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-06-08 21:12:55 [main] INFO  DataBaseConfig:23 - Closing DB connection
