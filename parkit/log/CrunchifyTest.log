@@ -20,3 +20,65 @@
 2022-06-08 21:12:55 [main] INFO  DataBaseConfig:23 - Closing DB connection
 2022-06-08 21:12:55 [main] INFO  DataBaseConfig:13 - Create DB connection
 2022-06-08 21:12:55 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-06-08 21:52:47 [main] INFO  App:10 - Initializing Parking System
+2022-06-08 21:52:47 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-06-08 21:53:00 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-06-08 21:53:00 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-06-08 21:53:00 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-06-08 21:53:00 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-06-08 21:53:06 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-06-08 21:53:06 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-06-08 21:53:06 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-06-08 21:53:06 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-06-08 21:53:06 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-06-08 23:16:18 [main] ERROR InputReaderUtil:18 - Error while reading user input from Shell
+java.util.NoSuchElementException: No line found
+	at java.util.Scanner.nextLine(Scanner.java:1656) ~[?:?]
+	at com.parkit.parkingsystem.util.InputReaderUtil.readSelection(InputReaderUtil.java:15) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:25) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-06-13 20:52:28 [main] INFO  App:10 - Initializing Parking System
+2022-06-13 20:52:28 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-06-13 20:52:38 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-06-13 20:52:38 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-06-13 20:52:38 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-06-13 20:52:38 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-06-13 20:52:38 [main] ERROR ParkingService:76 - Error fetching next available parking slot
+java.lang.Exception: Error fetching parking number from DB. Parking slots might be full
+	at com.parkit.parkingsystem.service.ParkingService.getNextParkingNumberIfAvailable(ParkingService.java:71) [classes/:?]
+	at com.parkit.parkingsystem.service.ParkingService.processIncomingVehicle(ParkingService.java:32) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:28) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-06-13 20:53:22 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-06-13 20:53:22 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-06-13 20:53:22 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-06-13 20:53:22 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-06-13 20:53:22 [main] ERROR ParkingService:117 - Unable to process exiting vehicle
+java.lang.NullPointerException: Cannot invoke "com.parkit.parkingsystem.model.Ticket.setOutTime(java.util.Date)" because "ticket" is null
+	at com.parkit.parkingsystem.service.ParkingService.processExitingVehicle(ParkingService.java:105) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:32) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-06-13 20:58:12 [main] INFO  App:10 - Initializing Parking System
+2022-06-13 20:58:12 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-06-13 20:58:22 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-06-13 20:58:23 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-06-13 20:58:23 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-06-13 20:58:23 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-06-13 20:58:23 [main] ERROR ParkingService:76 - Error fetching next available parking slot
+java.lang.Exception: Error fetching parking number from DB. Parking slots might be full
+	at com.parkit.parkingsystem.service.ParkingService.getNextParkingNumberIfAvailable(ParkingService.java:71) [classes/:?]
+	at com.parkit.parkingsystem.service.ParkingService.processIncomingVehicle(ParkingService.java:32) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:28) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-06-13 22:43:32 [main] ERROR InputReaderUtil:18 - Error while reading user input from Shell
+java.util.NoSuchElementException: No line found
+	at java.util.Scanner.nextLine(Scanner.java:1656) ~[?:?]
+	at com.parkit.parkingsystem.util.InputReaderUtil.readSelection(InputReaderUtil.java:15) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:25) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-06-13 22:43:32 [main] ERROR InputReaderUtil:18 - Error while reading user input from Shell
+java.util.NoSuchElementException: No line found
+	at java.util.Scanner.nextLine(Scanner.java:1656) ~[?:?]
+	at com.parkit.parkingsystem.util.InputReaderUtil.readSelection(InputReaderUtil.java:15) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:25) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
