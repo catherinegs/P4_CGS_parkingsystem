@@ -3,5 +3,8 @@
     {
       "path": ".plugins/com.genuitec.eclipse.code.core/com.genuitec.eclipse.code.core.tmp-project"
     }
-  ]
+  ],
+  "settings": {
+    "php.suggest.basic": "false"
+  }
 }

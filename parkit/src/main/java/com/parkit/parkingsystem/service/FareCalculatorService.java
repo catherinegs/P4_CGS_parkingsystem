@@ -1,4 +1,3 @@
-
 package com.parkit.parkingsystem.service;
 
 import java.util.concurrent.TimeUnit;
@@ -26,28 +25,39 @@ public class FareCalculatorService {
              
             case CAR: {
             	
-            	if (duration < 0.45) {
+            	if (duration < 0.75) {
             		
                 	ticket.setPrice(0.75 * Fare.CAR_RATE_PER_HOUR);
-          		
-            	} else if (duration >= 0.45 & duration < 24) {
+                	
+            	} else if (duration >= 1 & duration < 24) {
             		
                 	ticket.setPrice(1 * Fare.CAR_RATE_PER_HOUR);
+
+            	} else if (duration >=24) {
             		
-            	}           	
+                	ticket.setPrice(24 * Fare.CAR_RATE_PER_HOUR);
+
+            	}
+            		
             	
                 break;
             }
             case BIKE: {
-            	if (duration < 0.45) {
-                	
+            	
+            	if (duration < 0.75) {
+            		
                 	ticket.setPrice(0.75 * Fare.BIKE_RATE_PER_HOUR);
-                	
-             	} else if (duration >= 0.45 & duration < 24) {  
-             		
-             		ticket.setPrice(1 * Fare.BIKE_RATE_PER_HOUR);
-             	}
-                	
+
+            	} else if (duration >= 1 & duration < 24) {
+            		
+                	ticket.setPrice(1 * Fare.BIKE_RATE_PER_HOUR);
+
+            	} else if (duration >=24) {
+            		
+                	ticket.setPrice(24 * Fare.BIKE_RATE_PER_HOUR);
+
+            	}
+            		
 
                 break;
             }
