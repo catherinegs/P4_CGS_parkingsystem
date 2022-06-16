@@ -29,17 +29,14 @@ public class FareCalculatorService {
             		
                 	ticket.setPrice(0.75 * Fare.CAR_RATE_PER_HOUR);
                 	
-            	} else if (duration >= 1 & duration < 24) {
-            		
-                	ticket.setPrice(1 * Fare.CAR_RATE_PER_HOUR);
-
             	} else if (duration >=24) {
             		
                 	ticket.setPrice(24 * Fare.CAR_RATE_PER_HOUR);
 
-            	}
+            	} else 
             		
-            	
+                	ticket.setPrice(1 * Fare.CAR_RATE_PER_HOUR);
+        	
                 break;
             }
             case BIKE: {
@@ -48,16 +45,13 @@ public class FareCalculatorService {
             		
                 	ticket.setPrice(0.75 * Fare.BIKE_RATE_PER_HOUR);
 
-            	} else if (duration >= 1 & duration < 24) {
-            		
-                	ticket.setPrice(1 * Fare.BIKE_RATE_PER_HOUR);
-
-            	} else if (duration >=24) {
+            	}  else if (duration >=24) {
             		
                 	ticket.setPrice(24 * Fare.BIKE_RATE_PER_HOUR);
 
-            	}
+            	} else  
             		
+                	ticket.setPrice(1 * Fare.BIKE_RATE_PER_HOUR);
 
                 break;
             }
