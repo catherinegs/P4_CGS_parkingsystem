@@ -111,8 +111,7 @@ public class FareCalculatorServiceTest {
         fareCalculatorService.calculateFare(ticket);
         assertEquals( (0.75 * Fare.CAR_RATE_PER_HOUR) , ticket.getPrice());
     }
-<<<<<<< Updated upstream
-=======
+
     
     @Test
     public void calculateFareBikeWithFreeParkingTime(){
@@ -141,7 +140,7 @@ public class FareCalculatorServiceTest {
         fareCalculatorService.calculateFare(ticket);
         assertEquals( (0.00 * Fare.CAR_RATE_PER_HOUR) , ticket.getPrice());
     }
->>>>>>> Stashed changes
+
 
     @Test
     public void calculateFareCarWithMoreThanADayParkingTime(){
