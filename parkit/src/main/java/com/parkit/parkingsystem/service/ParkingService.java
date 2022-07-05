@@ -9,6 +9,10 @@ import com.parkit.parkingsystem.util.InputReaderUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Date;
 
 public class ParkingService {
@@ -20,6 +24,9 @@ public class ParkingService {
     private InputReaderUtil inputReaderUtil;
     private ParkingSpotDAO parkingSpotDAO;
     private  TicketDAO ticketDAO;
+    Connection con;
+    Statement stmt;
+    ResultSet rs;
 
     public ParkingService(InputReaderUtil inputReaderUtil, ParkingSpotDAO parkingSpotDAO, TicketDAO ticketDAO){
         this.inputReaderUtil = inputReaderUtil;
@@ -65,7 +72,7 @@ public class ParkingService {
         try{
             ParkingType parkingType = getVehichleType();
             parkingNumber = parkingSpotDAO.getNextAvailableSlot(parkingType);
-            if(parkingNumber > 0){
+            if(parkingNumber > 0 && parkingNumber < 300){
                 parkingSpot = new ParkingSpot(parkingNumber,parkingType, true);
             }else{
                 throw new Exception("Error fetching parking number from DB. Parking slots might be full");
@@ -97,9 +104,10 @@ public class ParkingService {
         }
     }
 
+    
     public void processExitingVehicle() {
         try{
-            String vehicleRegNumber = getVehichleRegNumber();
+            String vehicleRegNumber = getVehichleRegNumber();            
             Ticket ticket = ticketDAO.getTicket(vehicleRegNumber);
             Date outTime = new Date();
             ticket.setOutTime(outTime);
@@ -108,13 +116,35 @@ public class ParkingService {
                 ParkingSpot parkingSpot = ticket.getParkingSpot();
                 parkingSpot.setAvailable(true);
                 parkingSpotDAO.updateParking(parkingSpot);
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/prod?serverTimezone=UTC","root","rootMacroot40");
+                stmt = con.createStatement();     // Create a Statement object  
+                rs = stmt.executeQuery("SELECT VEHICLE_REG_NUMBER FROM `ticket`");
+                while (rs.next()) {               // Position the cursor                  
+                	String currentVehicleRegNumber = rs.getString("VEHICLE_REG_NUMBER");      // Retrieve only the three column value
+
+            	if (vehicleRegNumber == currentVehicleRegNumber)  {
+            		System.out.println("Please pay the parking fare with 5% discount for good clients:" + (ticket.getPrice() - ticket.getPrice()*5/100));
+                    System.out.println("Recorded out-time for current vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime); 
+
+            	}else{
+
                 System.out.println("Please pay the parking fare:" + ticket.getPrice());
-                System.out.println("Recorded out-time for vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime);
-            }else{
+                System.out.println("Recorded out-time for vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime); 
+            	
+                }
+                }
+                rs.close();                       // Close the ResultSet                  
+                stmt.close();  
+
+            }else {
                 System.out.println("Unable to update ticket information. Error occurred");
             }
         }catch(Exception e){
             logger.error("Unable to process exiting vehicle",e);
         }
+            }
+
     }
-}
+
+
+
