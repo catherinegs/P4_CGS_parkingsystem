@@ -1817,3 +1817,318 @@ java.util.NoSuchElementException: No line found
 	at com.parkit.parkingsystem.util.InputReaderUtil.readSelection(InputReaderUtil.java:15) [classes/:?]
 	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:25) [classes/:?]
 	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-11 21:35:22 [main] INFO  App:10 - Initializing Parking System
+2022-07-11 21:35:22 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-11 21:35:33 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-11 21:35:33 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-11 21:35:33 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-11 21:35:33 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-11 21:35:33 [main] ERROR ParkingService:83 - Error fetching next available parking slot
+java.lang.Exception: Error fetching parking number from DB. Parking slots might be full
+	at com.parkit.parkingsystem.service.ParkingService.getNextParkingNumberIfAvailable(ParkingService.java:78) [classes/:?]
+	at com.parkit.parkingsystem.service.ParkingService.processIncomingVehicle(ParkingService.java:39) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:28) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-11 21:35:58 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-11 21:35:58 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-11 21:35:58 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-11 21:35:59 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-11 21:35:59 [main] ERROR ParkingService:143 - Unable to process exiting vehicle
+java.lang.NullPointerException: Cannot invoke "com.parkit.parkingsystem.model.Ticket.setOutTime(java.util.Date)" because "ticket" is null
+	at com.parkit.parkingsystem.service.ParkingService.processExitingVehicle(ParkingService.java:113) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:32) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-11 21:41:00 [main] INFO  App:10 - Initializing Parking System
+2022-07-11 21:41:00 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-11 21:41:12 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-11 21:41:13 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-11 21:41:13 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-11 21:41:13 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-11 21:41:13 [main] ERROR ParkingService:143 - Unable to process exiting vehicle
+java.lang.NullPointerException: Cannot invoke "com.parkit.parkingsystem.model.Ticket.setOutTime(java.util.Date)" because "ticket" is null
+	at com.parkit.parkingsystem.service.ParkingService.processExitingVehicle(ParkingService.java:113) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:32) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-11 22:04:45 [main] INFO  App:10 - Initializing Parking System
+2022-07-11 22:04:45 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-11 22:05:25 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-11 22:05:25 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-11 22:05:25 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-11 22:05:25 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-11 22:05:25 [main] ERROR ParkingService:83 - Error fetching next available parking slot
+java.lang.Exception: Error fetching parking number from DB. Parking slots might be full
+	at com.parkit.parkingsystem.service.ParkingService.getNextParkingNumberIfAvailable(ParkingService.java:78) [classes/:?]
+	at com.parkit.parkingsystem.service.ParkingService.processIncomingVehicle(ParkingService.java:39) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:28) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-11 23:02:32 [main] ERROR InputReaderUtil:18 - Error while reading user input from Shell
+java.util.NoSuchElementException: No line found
+	at java.util.Scanner.nextLine(Scanner.java:1656) ~[?:?]
+	at com.parkit.parkingsystem.util.InputReaderUtil.readSelection(InputReaderUtil.java:15) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:25) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-12 22:04:29 [main] INFO  App:10 - Initializing Parking System
+2022-07-12 22:04:29 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-12 22:04:38 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-12 22:04:38 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-12 22:04:38 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-12 22:04:38 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-12 22:04:38 [main] ERROR ParkingService:83 - Error fetching next available parking slot
+java.lang.Exception: Error fetching parking number from DB. Parking slots might be full
+	at com.parkit.parkingsystem.service.ParkingService.getNextParkingNumberIfAvailable(ParkingService.java:78) [classes/:?]
+	at com.parkit.parkingsystem.service.ParkingService.processIncomingVehicle(ParkingService.java:39) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:28) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-12 22:10:13 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-12 22:10:13 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-12 22:10:13 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-12 22:10:13 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-12 22:10:13 [main] ERROR ParkingService:83 - Error fetching next available parking slot
+java.lang.Exception: Error fetching parking number from DB. Parking slots might be full
+	at com.parkit.parkingsystem.service.ParkingService.getNextParkingNumberIfAvailable(ParkingService.java:78) [classes/:?]
+	at com.parkit.parkingsystem.service.ParkingService.processIncomingVehicle(ParkingService.java:39) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:28) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-13 19:11:02 [main] INFO  App:10 - Initializing Parking System
+2022-07-13 19:11:02 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-13 19:11:11 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:11:12 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:11:12 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:11:12 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:11:12 [main] ERROR ParkingService:83 - Error fetching next available parking slot
+java.lang.Exception: Error fetching parking number from DB. Parking slots might be full
+	at com.parkit.parkingsystem.service.ParkingService.getNextParkingNumberIfAvailable(ParkingService.java:78) [classes/:?]
+	at com.parkit.parkingsystem.service.ParkingService.processIncomingVehicle(ParkingService.java:39) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:28) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-13 19:11:40 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:11:40 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:11:40 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:11:40 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:11:40 [main] ERROR ParkingService:144 - Unable to process exiting vehicle
+java.lang.NullPointerException: Cannot invoke "com.parkit.parkingsystem.model.Ticket.setOutTime(java.util.Date)" because "ticket" is null
+	at com.parkit.parkingsystem.service.ParkingService.processExitingVehicle(ParkingService.java:113) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:32) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-13 19:15:18 [main] INFO  App:10 - Initializing Parking System
+2022-07-13 19:15:18 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-13 19:15:25 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:15:26 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:15:26 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:15:26 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:15:26 [main] ERROR ParkingService:83 - Error fetching next available parking slot
+java.lang.Exception: Error fetching parking number from DB. Parking slots might be full
+	at com.parkit.parkingsystem.service.ParkingService.getNextParkingNumberIfAvailable(ParkingService.java:78) [classes/:?]
+	at com.parkit.parkingsystem.service.ParkingService.processIncomingVehicle(ParkingService.java:39) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:28) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-13 19:15:43 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:15:43 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:15:43 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:15:43 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:15:43 [main] ERROR ParkingService:144 - Unable to process exiting vehicle
+java.lang.NullPointerException: Cannot invoke "com.parkit.parkingsystem.model.Ticket.setOutTime(java.util.Date)" because "ticket" is null
+	at com.parkit.parkingsystem.service.ParkingService.processExitingVehicle(ParkingService.java:113) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:32) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-13 19:19:36 [main] INFO  App:10 - Initializing Parking System
+2022-07-13 19:19:36 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-13 19:19:44 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:19:44 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:19:44 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:19:44 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:19:44 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:19:44 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:19:44 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:19:44 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:19:44 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:21:25 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:21:25 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:21:25 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:21:25 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:21:25 [main] ERROR ParkingService:83 - Error fetching next available parking slot
+java.lang.Exception: Error fetching parking number from DB. Parking slots might be full
+	at com.parkit.parkingsystem.service.ParkingService.getNextParkingNumberIfAvailable(ParkingService.java:78) [classes/:?]
+	at com.parkit.parkingsystem.service.ParkingService.processIncomingVehicle(ParkingService.java:39) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:28) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-13 19:23:13 [main] INFO  App:10 - Initializing Parking System
+2022-07-13 19:23:13 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-13 19:23:30 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:23:31 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:23:31 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:23:31 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:26:15 [main] INFO  App:10 - Initializing Parking System
+2022-07-13 19:26:15 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-13 19:26:22 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:26:22 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:26:22 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:26:22 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:27:16 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:27:16 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:27:16 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:27:16 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:27:16 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:28:01 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:28:01 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:28:01 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:28:01 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:28:01 [main] ERROR ParkingService:83 - Error fetching next available parking slot
+java.lang.Exception: Error fetching parking number from DB. Parking slots might be full
+	at com.parkit.parkingsystem.service.ParkingService.getNextParkingNumberIfAvailable(ParkingService.java:78) [classes/:?]
+	at com.parkit.parkingsystem.service.ParkingService.processIncomingVehicle(ParkingService.java:39) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:28) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-13 19:28:20 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:28:20 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:28:20 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:28:20 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:29:15 [main] INFO  App:10 - Initializing Parking System
+2022-07-13 19:29:15 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-13 19:29:21 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:29:21 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:29:21 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:29:22 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:30:56 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:30:56 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:30:56 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:30:56 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:30:56 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:30:56 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:30:56 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:30:56 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:33:04 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:33:04 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:33:04 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:33:04 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:33:41 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:33:41 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:33:41 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:33:41 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:34:26 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:34:26 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:34:26 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:34:26 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:34:41 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:34:41 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:34:41 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:34:41 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:37:30 [main] INFO  App:10 - Initializing Parking System
+2022-07-13 19:37:30 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-13 19:37:47 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:37:47 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:37:47 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:37:47 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:38:12 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:38:12 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:38:12 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:38:12 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:38:48 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:38:48 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:38:48 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:38:48 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 19:38:48 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 19:38:48 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 19:38:48 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 19:38:48 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 20:55:19 [main] INFO  App:10 - Initializing Parking System
+2022-07-13 20:55:19 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-13 20:55:30 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 20:55:30 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 20:55:30 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 20:55:30 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 20:55:30 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 20:55:30 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 20:55:30 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 20:55:30 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 20:55:30 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 20:56:08 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 20:56:08 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 20:56:08 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 20:56:08 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 20:56:08 [main] ERROR ParkingService:83 - Error fetching next available parking slot
+java.lang.Exception: Error fetching parking number from DB. Parking slots might be full
+	at com.parkit.parkingsystem.service.ParkingService.getNextParkingNumberIfAvailable(ParkingService.java:78) [classes/:?]
+	at com.parkit.parkingsystem.service.ParkingService.processIncomingVehicle(ParkingService.java:39) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:28) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-13 21:33:21 [main] INFO  App:10 - Initializing Parking System
+2022-07-13 21:33:21 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-13 21:33:29 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:33:29 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 21:33:29 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:33:29 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:33:38 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:33:38 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:33:38 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:33:38 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:33:38 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:34:03 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:34:03 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 21:34:03 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:34:03 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:34:03 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:34:03 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:34:03 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:34:03 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:34:03 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:34:03 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:34:03 [main] ERROR ParkingService:151 - Unable to process exiting vehicle
+java.sql.SQLException: Column Index out of range, 3 > 1. 
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.result.ResultSetImpl.checkColumnBounds(ResultSetImpl.java:461) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1284) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getInt(ResultSetImpl.java:786) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.parkit.parkingsystem.service.ParkingService.processExitingVehicle(ParkingService.java:130) [classes/:?]
+	at com.parkit.parkingsystem.service.InteractiveShell.loadInterface(InteractiveShell.java:32) [classes/:?]
+	at com.parkit.parkingsystem.App.main(App.java:11) [classes/:?]
+2022-07-13 21:34:03 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:38:58 [main] INFO  App:10 - Initializing Parking System
+2022-07-13 21:38:58 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-07-13 21:39:05 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:39:05 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 21:39:05 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:39:05 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:39:14 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:39:14 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:39:14 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:39:14 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:39:14 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:39:30 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:39:30 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 21:39:30 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:39:30 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:39:30 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:39:30 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:39:30 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:39:30 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:39:30 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:39:30 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:39:30 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 21:39:30 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:39:30 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:40:41 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:40:41 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 21:40:41 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:40:41 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:40:46 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:40:46 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:40:46 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:40:46 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:40:46 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:41:05 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:41:05 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 21:41:05 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:41:05 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:41:05 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:41:05 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:41:05 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:41:05 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:41:05 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-07-13 21:41:05 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-07-13 21:41:05 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-07-13 21:41:05 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-07-13 21:41:05 [main] INFO  DataBaseConfig:23 - Closing DB connection

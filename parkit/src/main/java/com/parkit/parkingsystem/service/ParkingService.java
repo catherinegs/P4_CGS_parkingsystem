@@ -1,5 +1,7 @@
 package com.parkit.parkingsystem.service;
 
+import com.parkit.parkingsystem.config.DataBaseConfig;
+import com.parkit.parkingsystem.constants.DBConstants;
 import com.parkit.parkingsystem.constants.ParkingType;
 import com.parkit.parkingsystem.dao.ParkingSpotDAO;
 import com.parkit.parkingsystem.dao.TicketDAO;
@@ -11,6 +13,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Date;
@@ -20,6 +23,9 @@ public class ParkingService {
     private static final Logger logger = LogManager.getLogger("ParkingService");
 
     private static FareCalculatorService fareCalculatorService = new FareCalculatorService();
+    
+    public DataBaseConfig dataBaseConfig = new DataBaseConfig();
+
 
     private InputReaderUtil inputReaderUtil;
     private ParkingSpotDAO parkingSpotDAO;
@@ -106,6 +112,7 @@ public class ParkingService {
 
     
     public void processExitingVehicle() {
+    	Connection con = null;
         try{
             String vehicleRegNumber = getVehicleRegNumber();            
             Ticket ticket = ticketDAO.getTicket(vehicleRegNumber);
@@ -116,31 +123,35 @@ public class ParkingService {
                 ParkingSpot parkingSpot = ticket.getParkingSpot();
                 parkingSpot.setAvailable(true);
                 parkingSpotDAO.updateParking(parkingSpot);
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/prod?serverTimezone=UTC","root","rootMacroot40");
-                stmt = con.createStatement();     // Create a Statement object  
-                rs = stmt.executeQuery("SELECT count(*) AS VEHICLE_REG_NUMBER FROM `ticket`");
+                con = dataBaseConfig.getConnection();
+                PreparedStatement ps = con.prepareStatement(DBConstants.CURRENT_CUSTOMER);
+                ResultSet rs = ps.executeQuery();
                 while (rs.next()) {               // Position the cursor                  
                 	int count = rs.getInt("VEHICLE_REG_NUMBER");      // Retrieve only the three column value
 
             	if (count >= 2)  {
-            		System.out.println("Please pay the parking fare with 5% discount for good clients:" + (ticket.getPrice() - ticket.getPrice()*5/100));
                     System.out.println("Recorded out-time for current vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime); 
+            		System.out.println("Please pay the parking fare with 5% discount for good clients:" + (ticket.getPrice() - ticket.getPrice()*5/100));
 
-            	}else{
-
-                System.out.println("Please pay the parking fare:" + ticket.getPrice());
+            	}else {
+            		
                 System.out.println("Recorded out-time for vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime); 
-            	
-                }
-                }
-                rs.close();                       // Close the ResultSet                  
-                stmt.close();  
+                System.out.println("Please pay the parking fare:" + ticket.getPrice());
 
-            }else {
+            }                 
+            }
+                dataBaseConfig.closeResultSet(rs);
+                dataBaseConfig.closePreparedStatement(ps);
+            }
+
+            else{
                 System.out.println("Unable to update ticket information. Error occurred");
             }
         }catch(Exception e){
             logger.error("Unable to process exiting vehicle",e);
+        } finally {
+            dataBaseConfig.closeConnection(con);
+
         }
             }
 

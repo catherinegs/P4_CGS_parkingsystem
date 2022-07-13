@@ -29,7 +29,7 @@ import static org.mockito.Mockito.*;
 public class ParkingServiceTest {
 
     private static ParkingService parkingService;
-    private static final String vehicleRegNumber = "";
+    private static final String vehicleRegNumber = "DRTGB";
 
 
     @Mock
@@ -76,11 +76,13 @@ public class ParkingServiceTest {
         }
     }
     
+    
 	@Test
     public void processExitingVehicleTest(){
         parkingService.processExitingVehicle();
         verify(parkingSpotDAO, Mockito.times(1)).updateParking(any(ParkingSpot.class));
         verify(ticketDAO, Mockito.times(1)).updateTicket(any(Ticket.class));
+        final double result= ticket.getPrice(); 
     }
 
 
