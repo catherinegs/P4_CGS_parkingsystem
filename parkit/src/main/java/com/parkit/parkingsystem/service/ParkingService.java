@@ -123,6 +123,7 @@ public class ParkingService {
                 ParkingSpot parkingSpot = ticket.getParkingSpot();
                 parkingSpot.setAvailable(true);
                 parkingSpotDAO.updateParking(parkingSpot);
+                System.out.println("Recorded out-time for current vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime); 
                 con = dataBaseConfig.getConnection();
                 PreparedStatement ps = con.prepareStatement(DBConstants.CURRENT_CUSTOMER);
                 ResultSet rs = ps.executeQuery();
@@ -130,12 +131,10 @@ public class ParkingService {
                 	int count = rs.getInt("VEHICLE_REG_NUMBER");      // Retrieve only the three column value
 
             	if (count >= 2)  {
-                    System.out.println("Recorded out-time for current vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime); 
             		System.out.println("Please pay the parking fare with 5% discount for good clients:" + (ticket.getPrice() - ticket.getPrice()*5/100));
 
-            	}else {
+            	}else if (count == 1) {
             		
-                System.out.println("Recorded out-time for vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime); 
                 System.out.println("Please pay the parking fare:" + ticket.getPrice());
 
             }                 
