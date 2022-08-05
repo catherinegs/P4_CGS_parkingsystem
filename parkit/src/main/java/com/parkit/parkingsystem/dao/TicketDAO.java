@@ -5,19 +5,28 @@ import com.parkit.parkingsystem.constants.DBConstants;
 import com.parkit.parkingsystem.constants.ParkingType;
 import com.parkit.parkingsystem.model.ParkingSpot;
 import com.parkit.parkingsystem.model.Ticket;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class TicketDAO {
 
     private static final Logger logger = LogManager.getLogger("TicketDAO");
 
-    public DataBaseConfig dataBaseConfig = new DataBaseConfig();
+    public static DataBaseConfig dataBaseConfig = new DataBaseConfig();
+    
+    public static TreeMap<String, Integer> tmap;
 
     public boolean saveTicket(Ticket ticket){
         Connection con = null;
@@ -40,7 +49,7 @@ public class TicketDAO {
         }
     }
 
-    public Ticket getTicket(String vehicleRegNumber) {
+    public static Ticket getTicket(String vehicleRegNumber) {
         Connection con = null;
         Ticket ticket = null;
         try {
@@ -86,4 +95,43 @@ public class TicketDAO {
         }
         return false;
     }
+    
+           
+
+    TreeMap<String, Integer> countCurrentClient() throws IOException {
+    	tmap = new TreeMap<String, Integer>();
+    Connection con = null;
+    Ticket ticket = null;
+    Integer count = null;
+    try {
+        con = dataBaseConfig.getConnection();
+        PreparedStatement ps = con.prepareStatement(DBConstants.CURRENT_CUSTOMER);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {               // Position the cursor                  
+        	count = rs.getInt("VEHICLE_REG_NUMBER");    // Retrieve only the three column value
+       	
+        	String[] vehiculeRegNumber = null;
+			for (String name : vehiculeRegNumber) {
+
+        		tmap.put(name, count);
+
+        	}
+
+    } 
+        dataBaseConfig.closeResultSet(rs);
+        dataBaseConfig.closePreparedStatement(ps);
+    }catch(Exception e){
+        logger.error("Unable to process exiting vehicle",e);
+    }  
+    
+        finally {
+            dataBaseConfig.closeConnection(con);
+
+        } return tmap;
 }
+   	
+ 
+    	
+	 
+}
+

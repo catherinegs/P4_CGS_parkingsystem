@@ -22,6 +22,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
@@ -49,15 +50,13 @@ public class ParkingDataBaseIT {
     private static TicketDAO ticketDAO;
         
     private static DataBasePrepareService dataBasePrepareService;
-
     
+	private static Ticket ticket;
 
 
     @Mock
     private static InputReaderUtil inputReaderUtil;
 
-
-    
 
     @BeforeAll
     private static void setUp() throws Exception{
@@ -66,34 +65,27 @@ public class ParkingDataBaseIT {
         ticketDAO = new TicketDAO();
         ticketDAO.dataBaseConfig = dataBaseTestConfig;
         dataBasePrepareService = new DataBasePrepareService();
-        Ticket ticket = new Ticket();
+        ticket = new Ticket();
         ticket.setId(1);
         parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR);
         ParkingSpot parkingSpot= parkingSpotDAO.getParkingSpot(1);
         ticket.setParkingSpot(parkingSpot);
         ticket.setVehicleRegNumber("21");
-        Date  inTime = new Date("2022/06/8-17:22:17");
+        Date  inTime = new Date(2022, 06, 8, 17, 22, 17);
         ticket.setInTime(inTime);
-        Date outTime = new Date("2022/07/13-19:50:02");
-        ticket.setOutTime(outTime);
         ticketDAO.saveTicket(ticket);
         
        // Mockito.when(ticket.getInTime()).thenReturn(inTime);
         //Mockito.when(ticket.getOutTime()).thenReturn(outTime);
-
-
-
-
-
 
         
     }
 
 	@BeforeEach
     private void setUpPerTest() throws Exception {
-        when(inputReaderUtil.readSelection()).thenReturn(1);
-        when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn("21");
-        dataBasePrepareService.clearDataBaseEntries();
+       when(inputReaderUtil.readSelection()).thenReturn(1);
+       when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn("21");
+       dataBasePrepareService.clearDataBaseEntries();
 	}
 
 
@@ -107,37 +99,43 @@ public class ParkingDataBaseIT {
     public void testParkingACar(){
 
         ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
- 
-
-        
-  
 
         parkingService.processIncomingVehicle();
         
 
-        
-
-
         //check that a ticket is actualy saved in DB
 
-       assertNotNull(ticketDAO.getTicket("21"));
-
+       assertNotNull(TicketDAO.getTicket("21"));
        
-	   //ParkingSpot parkingSpot = ticket.getParkingSpot();
-	  assertTrue(parkingSpotDAO.updateParking(null));
-
-        //TODO: check that a ticket is actualy saved in DB and Parking table is updated with availability
+       Ticket ticket1 = TicketDAO.getTicket("21");
+              
+       //check that Parking table is updated with availability
+       
+	   ParkingSpot parkingSpot1 = ticket1.getParkingSpot();
+	   
+	   assertFalse(parkingSpot1.isAvailable());
+	   
     }
 
 
 	@Test
     public void testParkingLotExit(){
+		
         testParkingACar();
+        
         ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
         
+        ticket.getId();
+        
 
-       //ticket.setOutTime(outTime);
-
+        Ticket ticket1 = TicketDAO.getTicket("21");
+        
+        ticket1.setInTime(new Date(2022, 06, 8, 17, 22, 17)); 
+        
+        Date outTime = new Date("2022/07/13-19:50:02");
+        
+        
+        ticket1.setOutTime(new Date("2022/07/13-19:50:02"));
 
 
         parkingService.processExitingVehicle();
@@ -145,10 +143,12 @@ public class ParkingDataBaseIT {
 
 
 
-       // Ticket ticket = ticketDAO.getTicket("21"); 
 
 
-       // assertEquals((36), ticket.getPrice());
+       //ticketDAO.getTicket(outTime); 
+
+
+       assertEquals((36), ticket1.getPrice());
         
         //TODO: check that the fare generated and out time are populated correctly in the database
     }

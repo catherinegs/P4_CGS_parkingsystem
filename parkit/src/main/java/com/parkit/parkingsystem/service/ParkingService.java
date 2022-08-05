@@ -11,12 +11,17 @@ import com.parkit.parkingsystem.util.InputReaderUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class ParkingService {
 
@@ -25,6 +30,9 @@ public class ParkingService {
     private static FareCalculatorService fareCalculatorService = new FareCalculatorService();
     
     public DataBaseConfig dataBaseConfig = new DataBaseConfig();
+    
+    
+
 
 
     private InputReaderUtil inputReaderUtil;
@@ -109,12 +117,15 @@ public class ParkingService {
             }
         }
     }
+    
 
     
     public void processExitingVehicle() {
-    	Connection con = null;
+    	
+
+ 
         try{
-            String vehicleRegNumber = getVehicleRegNumber();            
+            String vehicleRegNumber = getVehicleRegNumber();
             Ticket ticket = ticketDAO.getTicket(vehicleRegNumber);
         	Date outTime = new Date();
             ticket.setOutTime(outTime);
@@ -123,38 +134,22 @@ public class ParkingService {
                 ParkingSpot parkingSpot = ticket.getParkingSpot();
                 parkingSpot.setAvailable(true);
                 parkingSpotDAO.updateParking(parkingSpot);
-                System.out.println("Recorded out-time for current vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime); 
-                con = dataBaseConfig.getConnection();
-                PreparedStatement ps = con.prepareStatement(DBConstants.CURRENT_CUSTOMER);
-                ResultSet rs = ps.executeQuery();
-                while (rs.next()) {               // Position the cursor                  
-                	int count = rs.getInt("VEHICLE_REG_NUMBER");      // Retrieve only the three column value
+                System.out.println("Recorded out-time for current vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime);
+ 
 
-            	if (count >= 2)  {
-            		System.out.println("Please pay the parking fare with 5% discount for good clients:" + (ticket.getPrice() - ticket.getPrice()*5/100));
-
-            	}else if (count == 1) {
-            		
                 System.out.println("Please pay the parking fare:" + ticket.getPrice());
-
-            }                 
-            }
-                dataBaseConfig.closeResultSet(rs);
-                dataBaseConfig.closePreparedStatement(ps);
-            }
-
-            else{
+                //intégrer méthode countOccurence
+            }else{
                 System.out.println("Unable to update ticket information. Error occurred");
             }
+            
         }catch(Exception e){
             logger.error("Unable to process exiting vehicle",e);
-        } finally {
-            dataBaseConfig.closeConnection(con);
-
+            } 
         }
-            }
+}
 
-    }
+    
 
 
 
