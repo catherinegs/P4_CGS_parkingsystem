@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -98,26 +99,22 @@ public class TicketDAO {
     
            
 
-    TreeMap<String, Integer> countCurrentClient() throws IOException {
-    	tmap = new TreeMap<String, Integer>();
+    public static ArrayList<String> countCurrentClient() throws ClassNotFoundException, SQLException {
+        ArrayList<String> numList = new ArrayList<>();
+
     Connection con = null;
     Ticket ticket = null;
-    Integer count = null;
+    String count = null;
     try {
         con = dataBaseConfig.getConnection();
         PreparedStatement ps = con.prepareStatement(DBConstants.CURRENT_CUSTOMER);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {               // Position the cursor                  
-        	count = rs.getInt("VEHICLE_REG_NUMBER");    // Retrieve only the three column value
-       	
-        	String[] vehiculeRegNumber = null;
-			for (String name : vehiculeRegNumber) {
+        	count = rs.getString("VEHICLE_REG_NUMBER");    // Retrieve only the three column value
+            numList.add(count);       	
+ 
 
-        		tmap.put(name, count);
-
-        	}
-
-    } 
+    }  
         dataBaseConfig.closeResultSet(rs);
         dataBaseConfig.closePreparedStatement(ps);
     }catch(Exception e){
@@ -127,7 +124,8 @@ public class TicketDAO {
         finally {
             dataBaseConfig.closeConnection(con);
 
-        } return tmap;
+        } return numList;
+ 
 }
    	
  

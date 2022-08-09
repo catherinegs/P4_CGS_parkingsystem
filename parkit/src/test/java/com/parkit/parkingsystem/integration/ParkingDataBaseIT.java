@@ -123,19 +123,17 @@ public class ParkingDataBaseIT {
 		
         testParkingACar();
         
-        ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
-        
-        ticket.getId();
-        
+        Ticket ticket2 = TicketDAO.getTicket("21");
 
-        Ticket ticket1 = TicketDAO.getTicket("21");
         
-        ticket1.setInTime(new Date(2022, 06, 8, 17, 22, 17)); 
+        ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
+                    
         
         Date outTime = new Date("2022/07/13-19:50:02");
         
         
-        ticket1.setOutTime(new Date("2022/07/13-19:50:02"));
+        ticket2.setOutTime(new Date("2022/07/13-19:50:02"));
+       
 
 
         parkingService.processExitingVehicle();
@@ -148,7 +146,7 @@ public class ParkingDataBaseIT {
        //ticketDAO.getTicket(outTime); 
 
 
-       assertEquals((36), ticket1.getPrice());
+       assertEquals((36), ticket2.getPrice());
         
         //TODO: check that the fare generated and out time are populated correctly in the database
     }
