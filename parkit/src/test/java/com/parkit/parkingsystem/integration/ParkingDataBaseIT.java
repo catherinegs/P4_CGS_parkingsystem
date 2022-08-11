@@ -108,6 +108,12 @@ public class ParkingDataBaseIT {
        assertNotNull(TicketDAO.getTicket("21"));
        
        Ticket ticket1 = TicketDAO.getTicket("21");
+       
+       ticket1.inTime= new Date("2022/06/08-17:22:17"); 
+
+       
+       ticketDAO.saveTicket(ticket1);            
+
               
        //check that Parking table is updated with availability
        
@@ -118,35 +124,34 @@ public class ParkingDataBaseIT {
     }
 
 
+	@SuppressWarnings("deprecation")
 	@Test
     public void testParkingLotExit(){
 		
         testParkingACar();
-        
-        Ticket ticket2 = TicketDAO.getTicket("21");
-
-        
+                
         ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
-                    
         
-        Date outTime = new Date("2022/07/13-19:50:02");
+      
+ 
+                   
+        parkingService.processExitingVehicle(); 
         
+        Ticket ticket1 =TicketDAO.getTicket("21");
+                
+ 
         
-        ticket2.setOutTime(new Date("2022/07/13-19:50:02"));
+        ticket1.outTime = new Date("2022/07/13-19:50:02");  
+
+
+
+
+        ticketDAO.updateTicket(ticket1); 
+       
        
 
 
-        parkingService.processExitingVehicle();
-        
-
-
-
-
-
-       //ticketDAO.getTicket(outTime); 
-
-
-       assertEquals((36), ticket2.getPrice());
+       assertEquals((36), ticket1.getPrice());
         
         //TODO: check that the fare generated and out time are populated correctly in the database
     }

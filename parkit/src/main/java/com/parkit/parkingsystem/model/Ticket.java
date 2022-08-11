@@ -8,8 +8,8 @@ public class Ticket {
     private ParkingSpot parkingSpot;
     private String vehicleRegNumber;
     private double price;
-    private Date inTime;
-    private Date outTime;
+    public Date inTime;
+    public Date outTime;
 
     public int getId() {
         return id;
