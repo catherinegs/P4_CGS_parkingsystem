@@ -75,9 +75,6 @@ public class ParkingDataBaseIT {
         ticket.setInTime(inTime);
         ticketDAO.saveTicket(ticket);
         
-       // Mockito.when(ticket.getInTime()).thenReturn(inTime);
-        //Mockito.when(ticket.getOutTime()).thenReturn(outTime);
-
         
     }
 
@@ -131,29 +128,20 @@ public class ParkingDataBaseIT {
         testParkingACar();
                 
         ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
-        
-      
- 
-                   
+                               
         parkingService.processExitingVehicle(); 
         
         Ticket ticket1 =TicketDAO.getTicket("21");
-                
- 
-        
+                        
         ticket1.outTime = new Date("2022/07/13-19:50:02");  
-
-
 
 
         ticketDAO.updateTicket(ticket1); 
        
-       
-
-
+        //check that the fare generated and out time are populated correctly in the database
+     
        assertEquals((36), ticket1.getPrice());
         
-        //TODO: check that the fare generated and out time are populated correctly in the database
     }
 
 }
