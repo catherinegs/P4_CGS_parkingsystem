@@ -79,9 +79,9 @@ public class ParkingDataBaseIT {
 
 		// check that a ticket is actualy saved in DB
 
-		assertNotNull(TicketDAO.getTicket("21"));
+		assertNotNull(ticketDAO.getTicket("21"));
 
-		Ticket ticket1 = TicketDAO.getTicket("21");
+		Ticket ticket1 = ticketDAO.getTicket("21");
 
 		ticket1.inTime = new Date("2022/06/08-17:22:17");
 
@@ -105,7 +105,7 @@ public class ParkingDataBaseIT {
 
 		parkingService.processExitingVehicle();
 
-		Ticket ticket1 = TicketDAO.getTicket("21");
+		Ticket ticket1 = ticketDAO.getTicket("21");
 
 		ticket1.outTime = new Date("2022/07/13-19:50:02");
 
