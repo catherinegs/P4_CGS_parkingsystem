@@ -54,7 +54,8 @@ public class ParkingServiceTest {
 
 
 
-    @BeforeEach
+    @SuppressWarnings("static-access")
+	@BeforeEach
     private void setUpPerTest() {
         try {
             when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn(vehicleRegNumber);
@@ -67,6 +68,7 @@ public class ParkingServiceTest {
 
             when(ticketDAO.getTicket(anyString())).thenReturn(ticket);
             when(ticketDAO.updateTicket(any(Ticket.class))).thenReturn(true);
+
 
             when(parkingSpotDAO.updateParking(any(ParkingSpot.class))).thenReturn(true);
 

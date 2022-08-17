@@ -92,7 +92,7 @@ public class TicketDAO {
 	}
 
 	public static ArrayList<String> countCurrentClient() throws ClassNotFoundException, SQLException {
-		ArrayList<String> numList = new ArrayList<>();
+		ArrayList<String> numList = new ArrayList<String>();
 
 		Connection con = null;
 		Ticket ticket = null;
