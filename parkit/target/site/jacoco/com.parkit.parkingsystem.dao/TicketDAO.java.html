@@ -21,7 +21,7 @@ import java.util.TreeMap;
 
 <span class="fc" id="L22">	public static DataBaseConfig dataBaseConfig = new DataBaseConfig();</span>
 
-	public static TreeMap&lt;String, Integer&gt; tmap;
+<span class="fc" id="L24">	public static TreeMap&lt;String, Integer&gt; tmap;</span>
 
 	public boolean saveTicket(Ticket ticket) {
 <span class="nc" id="L27">		Connection con = null;</span>
@@ -38,7 +38,7 @@ import java.util.TreeMap;
 <span class="nc" id="L38">			return ps.execute();</span>
 <span class="nc" id="L39">		} catch (Exception ex) {</span>
 <span class="nc" id="L40">			logger.error(&quot;Error fetching next available slot&quot;, ex);</span>
-		} finally {
+<span class="nc" id="L41">		} finally {</span>
 <span class="nc" id="L42">			dataBaseConfig.closeConnection(con);</span>
 <span class="nc" id="L43">			return false;</span>
 		}
@@ -67,7 +67,7 @@ import java.util.TreeMap;
 <span class="nc" id="L67">			dataBaseConfig.closePreparedStatement(ps);</span>
 <span class="nc" id="L68">		} catch (Exception ex) {</span>
 <span class="nc" id="L69">			logger.error(&quot;Error fetching next available slot&quot;, ex);</span>
-		} finally {
+<span class="nc" id="L70">		} finally {</span>
 <span class="nc" id="L71">			dataBaseConfig.closeConnection(con);</span>
 <span class="nc" id="L72">			return ticket;</span>
 		}
@@ -108,7 +108,7 @@ import java.util.TreeMap;
 			}
 <span class="fc" id="L109">			dataBaseConfig.closeResultSet(rs);</span>
 <span class="fc" id="L110">			dataBaseConfig.closePreparedStatement(ps);</span>
-<span class="nc" id="L111">		} catch (Exception e) {</span>
+<span class="pc" id="L111">		} catch (Exception e) {</span>
 <span class="nc" id="L112">			logger.error(&quot;Unable to process exiting vehicle&quot;, e);</span>
 		}
 
