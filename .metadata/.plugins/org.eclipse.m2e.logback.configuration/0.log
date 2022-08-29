@@ -7225,3 +7225,55 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.codehaus.
 2022-08-24 22:42:03,650 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
 2022-08-24 22:42:17,164 [Worker-15: Launching parkit (86)] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/catherinegourdin/Documents/GitHub/P4_CGS_parkingsystem/parkit
 2022-08-24 22:42:17,164 [Worker-15: Launching parkit (86)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2022-08-24 22:46:53,938 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-24 22:46:53,939 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-24 22:46:53,939 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-24 22:46:53,940 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-24 22:46:54,952 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-24 22:46:54,952 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-24 22:46:54,953 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-24 22:46:54,953 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-28 21:36:11,816 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-08-28 21:37:16,002 [Worker-0: Launching Executing clean in _Users_catherinegourdin_Documents_GitHub_P4_CGS_parkingsystem_parkit] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/catherinegourdin/Documents/GitHub/P4_CGS_parkingsystem/parkit
+2022-08-28 21:37:16,004 [Worker-0: Launching Executing clean in _Users_catherinegourdin_Documents_GitHub_P4_CGS_parkingsystem_parkit] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2022-08-28 21:37:18,448 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-28 21:37:18,451 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-08-28 21:37:18,459 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-28 21:37:18,459 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-28 21:38:09,420 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2022-08-28 21:38:25,897 [Worker-1: Launching parkit (87)] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/catherinegourdin/Documents/GitHub/P4_CGS_parkingsystem/parkit
+2022-08-28 21:38:25,897 [Worker-1: Launching parkit (87)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean package
+2022-08-29 13:09:26,344 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-08-29 13:09:39,520 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2022-08-29 13:09:50,311 [Worker-19: Launching parkit (88)] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/catherinegourdin/Documents/GitHub/P4_CGS_parkingsystem/parkit
+2022-08-29 13:09:50,313 [Worker-19: Launching parkit (88)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2022-08-29 13:14:04,642 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-29 13:14:04,646 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-08-29 13:14:04,652 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-29 13:14:04,652 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-29 13:14:37,842 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-29 13:14:37,844 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-29 13:14:37,846 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-29 13:14:37,847 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-29 13:15:57,106 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2022-08-29 13:16:07,883 [Worker-7: Launching parkit (89)] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/catherinegourdin/Documents/GitHub/P4_CGS_parkingsystem/parkit
+2022-08-29 13:16:07,884 [Worker-7: Launching parkit (89)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2022-08-29 14:01:25,448 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-29 14:01:25,448 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-29 14:01:25,450 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-29 14:01:25,451 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-29 14:03:14,293 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-29 14:03:14,293 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-08-29 14:03:14,294 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-29 14:03:14,295 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-29 14:03:53,106 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-29 14:03:53,107 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-08-29 14:03:53,108 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-29 14:03:53,108 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-29 14:05:46,722 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2022-08-29 14:05:56,803 [Worker-28: Launching parkit (90)] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/catherinegourdin/Documents/GitHub/P4_CGS_parkingsystem/parkit
+2022-08-29 14:05:56,803 [Worker-28: Launching parkit (90)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2022-08-29 14:07:52,466 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-29 14:07:52,467 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-08-29 14:07:52,468 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-29 14:07:52,469 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource

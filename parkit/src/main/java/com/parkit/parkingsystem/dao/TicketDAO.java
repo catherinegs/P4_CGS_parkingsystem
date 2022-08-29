@@ -95,7 +95,6 @@ public class TicketDAO {
 		ArrayList<String> numList = new ArrayList<String>();
 
 		Connection con = null;
-		Ticket ticket = null;
 		String count = null;
 		try {
 			con = dataBaseConfig.getConnection();
