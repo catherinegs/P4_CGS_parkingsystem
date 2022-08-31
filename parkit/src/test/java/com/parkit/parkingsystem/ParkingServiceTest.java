@@ -50,7 +50,7 @@ public class ParkingServiceTest {
 
 
 
-    @SuppressWarnings("static-access")
+    //@SuppressWarnings("static-access")
 	@BeforeEach
     private void setUpPerTest() {
         try {
