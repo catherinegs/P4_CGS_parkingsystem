@@ -21,7 +21,7 @@ import java.util.TreeMap;
 
 <span class="fc" id="L22">	public static DataBaseConfig dataBaseConfig = new DataBaseConfig();</span>
 
-	public static TreeMap&lt;String, Integer&gt; tmap;
+<span class="fc" id="L24">	public static TreeMap&lt;String, Integer&gt; tmap;</span>
 
 	public boolean saveTicket(Ticket ticket) {
 <span class="nc" id="L27">		Connection con = null;</span>
@@ -38,7 +38,7 @@ import java.util.TreeMap;
 <span class="nc" id="L38">			return ps.execute();</span>
 <span class="nc" id="L39">		} catch (Exception ex) {</span>
 <span class="nc" id="L40">			logger.error(&quot;Error fetching next available slot&quot;, ex);</span>
-		} finally {
+<span class="nc" id="L41">		} finally {</span>
 <span class="nc" id="L42">			dataBaseConfig.closeConnection(con);</span>
 <span class="nc" id="L43">			return false;</span>
 		}
@@ -67,7 +67,7 @@ import java.util.TreeMap;
 <span class="nc" id="L67">			dataBaseConfig.closePreparedStatement(ps);</span>
 <span class="nc" id="L68">		} catch (Exception ex) {</span>
 <span class="nc" id="L69">			logger.error(&quot;Error fetching next available slot&quot;, ex);</span>
-		} finally {
+<span class="nc" id="L70">		} finally {</span>
 <span class="nc" id="L71">			dataBaseConfig.closeConnection(con);</span>
 <span class="nc" id="L72">			return ticket;</span>
 		}
@@ -95,28 +95,27 @@ import java.util.TreeMap;
 <span class="fc" id="L95">		ArrayList&lt;String&gt; numList = new ArrayList&lt;String&gt;();</span>
 
 <span class="fc" id="L97">		Connection con = null;</span>
-<span class="fc" id="L98">		Ticket ticket = null;</span>
-<span class="fc" id="L99">		String count = null;</span>
+<span class="fc" id="L98">		String count = null;</span>
 		try {
-<span class="fc" id="L101">			con = dataBaseConfig.getConnection();</span>
-<span class="fc" id="L102">			PreparedStatement ps = con.prepareStatement(DBConstants.CURRENT_CUSTOMER);</span>
-<span class="fc" id="L103">			ResultSet rs = ps.executeQuery();</span>
-<span class="fc bfc" id="L104" title="All 2 branches covered.">			while (rs.next()) { // Position the cursor</span>
-<span class="fc" id="L105">				count = rs.getString(&quot;VEHICLE_REG_NUMBER&quot;); // Retrieve only the three column value</span>
-<span class="fc" id="L106">				numList.add(count);</span>
+<span class="fc" id="L100">			con = dataBaseConfig.getConnection();</span>
+<span class="fc" id="L101">			PreparedStatement ps = con.prepareStatement(DBConstants.CURRENT_CUSTOMER);</span>
+<span class="fc" id="L102">			ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L103" title="All 2 branches covered.">			while (rs.next()) { // Position the cursor</span>
+<span class="fc" id="L104">				count = rs.getString(&quot;VEHICLE_REG_NUMBER&quot;); // Retrieve only the three column value</span>
+<span class="fc" id="L105">				numList.add(count);</span>
 
 			}
-<span class="fc" id="L109">			dataBaseConfig.closeResultSet(rs);</span>
-<span class="fc" id="L110">			dataBaseConfig.closePreparedStatement(ps);</span>
-<span class="nc" id="L111">		} catch (Exception e) {</span>
-<span class="nc" id="L112">			logger.error(&quot;Unable to process exiting vehicle&quot;, e);</span>
+<span class="fc" id="L108">			dataBaseConfig.closeResultSet(rs);</span>
+<span class="fc" id="L109">			dataBaseConfig.closePreparedStatement(ps);</span>
+<span class="pc" id="L110">		} catch (Exception e) {</span>
+<span class="nc" id="L111">			logger.error(&quot;Unable to process exiting vehicle&quot;, e);</span>
 		}
 
 		finally {
-<span class="fc" id="L116">			dataBaseConfig.closeConnection(con);</span>
+<span class="fc" id="L115">			dataBaseConfig.closeConnection(con);</span>
 
 		}
-<span class="fc" id="L119">		return numList;</span>
+<span class="fc" id="L118">		return numList;</span>
 
 	}
 
