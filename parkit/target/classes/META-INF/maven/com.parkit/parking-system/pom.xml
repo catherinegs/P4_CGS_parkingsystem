@@ -59,9 +59,16 @@
             <artifactId>maven-assembly-plugin</artifactId>
             <version>3.4.2</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.spotbugs</groupId>
+            <artifactId>spotbugs-maven-plugin</artifactId>
+            <version>4.7.1.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
+    
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -140,7 +147,24 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>4.7.1.1</version>
+                <executions>
+                  <execution>
+                  <id>spotbugs-integration</id>
+                  <phase>verify</phase>
+                     <goals>
+                     <goal>spotbugs</goal>
+                     </goals>
+                  </execution>
+              </executions>
+
+            </plugin>
+            
         </plugins>
+        
     </build>
 
 </project>
