@@ -8026,3 +8026,9 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.codehaus.
 2022-09-01 21:24:31,715 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
 2022-09-01 21:24:43,651 [Worker-54: Launching parkit (103)] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/catherinegourdin/Documents/GitHub/P4_CGS_parkingsystem/parkit
 2022-09-01 21:24:43,652 [Worker-54: Launching parkit (103)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2022-09-01 21:33:06,948 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-01 21:33:06,949 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-09-01 21:33:06,950 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-09-01 21:33:06,950 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-09-01 21:33:06,955 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Fork Value is true
+2022-09-01 21:33:10,368 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Done SpotBugs Analysis....
