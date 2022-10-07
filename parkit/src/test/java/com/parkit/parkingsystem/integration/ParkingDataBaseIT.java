@@ -38,7 +38,7 @@ public class ParkingDataBaseIT {
 	@Mock
 	private static InputReaderUtil inputReaderUtil;
 	
-	@SuppressWarnings("deprecation")
+	@SuppressWarnings({ "deprecation", "static-access" })
 	@BeforeAll
 	private static void setUp() throws Exception {
 		parkingSpotDAO = new ParkingSpotDAO();

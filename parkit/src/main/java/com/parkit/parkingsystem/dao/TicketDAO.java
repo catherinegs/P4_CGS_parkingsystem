@@ -19,7 +19,7 @@ public class TicketDAO {
 
 	private static final Logger logger = LogManager.getLogger("TicketDAO");
 
-	public static DataBaseConfig dataBaseConfig = new DataBaseConfig();
+	public static  DataBaseConfig dataBaseConfig = new DataBaseConfig();
 
 	public static TreeMap<String, Integer> tmap;
 
@@ -35,13 +35,13 @@ public class TicketDAO {
 			ps.setDouble(3, ticket.getPrice());
 			ps.setTimestamp(4, new Timestamp(ticket.getInTime().getTime()));
 			ps.setTimestamp(5, (ticket.getOutTime() == null) ? null : (new Timestamp(ticket.getOutTime().getTime())));
-			return ps.execute();
+			return ps.execute();			
 		} catch (Exception ex) {
 			logger.error("Error fetching next available slot", ex);
-		} finally {
-			dataBaseConfig.closeConnection(con);
-			return false;
+		} finally {			
+			dataBaseConfig.closeConnection(con);		
 		}
+		  return false;
 	}
 
 	public  Ticket getTicket(String vehicleRegNumber) {
@@ -67,10 +67,11 @@ public class TicketDAO {
 			dataBaseConfig.closePreparedStatement(ps);
 		} catch (Exception ex) {
 			logger.error("Error fetching next available slot", ex);
-		} finally {
-			dataBaseConfig.closeConnection(con);
-			return ticket;
+		} 
+		  finally {
+			dataBaseConfig.closeConnection(con);			
 		}
+		  return ticket;
 	}
 
 	public boolean updateTicket(Ticket ticket) {

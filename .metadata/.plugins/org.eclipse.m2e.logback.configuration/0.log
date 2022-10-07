@@ -8197,3 +8197,81 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.codehaus.
 2022-10-07 21:21:30,203 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2022-10-07 21:21:30,743 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Fork Value is true
 2022-10-07 21:21:33,837 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Done SpotBugs Analysis....
+2022-10-07 21:38:28,930 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:38:28,930 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:38:28,931 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:38:28,931 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:38:28,936 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Fork Value is true
+2022-10-07 21:38:32,236 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Done SpotBugs Analysis....
+2022-10-07 21:43:26,971 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:43:26,972 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-10-07 21:43:26,977 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:43:26,977 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:43:26,983 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Fork Value is true
+2022-10-07 21:43:30,283 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Done SpotBugs Analysis....
+2022-10-07 21:44:25,537 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:44:25,537 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:44:25,538 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:44:25,539 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:44:25,545 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Fork Value is true
+2022-10-07 21:44:28,821 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Done SpotBugs Analysis....
+2022-10-07 21:44:41,688 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:44:41,688 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:44:41,689 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:44:41,689 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:44:41,693 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Fork Value is true
+2022-10-07 21:44:44,948 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Done SpotBugs Analysis....
+2022-10-07 21:45:02,100 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:45:02,100 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-10-07 21:45:02,101 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:45:02,101 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:45:02,105 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Fork Value is true
+2022-10-07 21:45:05,222 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Done SpotBugs Analysis....
+2022-10-07 21:45:32,651 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:45:32,651 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-10-07 21:45:32,652 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:45:32,652 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:45:32,657 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Fork Value is true
+2022-10-07 21:45:35,768 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Done SpotBugs Analysis....
+2022-10-07 21:45:45,601 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:45:45,602 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-10-07 21:45:45,603 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:45:45,603 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:45:45,607 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Fork Value is true
+2022-10-07 21:45:48,793 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Done SpotBugs Analysis....
+2022-10-07 21:47:54,503 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:47:54,503 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:47:54,504 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:47:54,504 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:47:54,509 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Fork Value is true
+2022-10-07 21:47:57,414 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Done SpotBugs Analysis....
+2022-10-07 21:53:43,844 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:53:43,844 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-10-07 21:53:43,845 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:53:43,845 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:53:43,848 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Fork Value is true
+2022-10-07 21:53:46,782 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Done SpotBugs Analysis....
+2022-10-07 21:54:33,494 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:54:33,494 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-10-07 21:54:33,495 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:54:33,495 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:54:33,500 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Fork Value is true
+2022-10-07 21:54:36,569 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Done SpotBugs Analysis....
+2022-10-07 21:59:11,528 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:59:11,528 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-10-07 21:59:11,529 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-10-07 21:59:11,529 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-10-07 21:59:11,534 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Fork Value is true
+2022-10-07 21:59:14,458 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Done SpotBugs Analysis....
+2022-10-07 22:02:18,806 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2022-10-07 22:02:32,308 [Worker-44: Launching parkit (111)] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/catherinegourdin/Documents/GitHub/P4_CGS_parkingsystem/parkit
+2022-10-07 22:02:32,309 [Worker-44: Launching parkit (111)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2022-10-07 22:07:43,508 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2022-10-07 22:07:51,344 [Worker-46: Launching parkit (112)] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/catherinegourdin/Documents/GitHub/P4_CGS_parkingsystem/parkit
+2022-10-07 22:07:51,344 [Worker-46: Launching parkit (112)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B site
+2022-10-07 22:10:52,195 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2022-10-07 22:10:59,534 [Worker-52: Launching parkit (113)] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/catherinegourdin/Documents/GitHub/P4_CGS_parkingsystem/parkit
+2022-10-07 22:10:59,534 [Worker-52: Launching parkit (113)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
+2022-10-07 22:21:18,686 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2022-10-07 22:21:25,865 [Worker-55: Launching parkit (114)] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/catherinegourdin/Documents/GitHub/P4_CGS_parkingsystem/parkit
+2022-10-07 22:21:25,865 [Worker-55: Launching parkit (114)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B surefire-report:report
