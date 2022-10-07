@@ -157,6 +157,7 @@
                   <phase>verify</phase>
                      <goals>
                      <goal>spotbugs</goal>
+                     <goal>gui</goal>
                      </goals>
                   </execution>
               </executions>
