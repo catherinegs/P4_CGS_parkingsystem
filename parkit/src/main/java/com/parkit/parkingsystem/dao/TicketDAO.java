@@ -25,34 +25,39 @@ public class TicketDAO {
 
 	public boolean saveTicket(Ticket ticket) {
 		Connection con = null;
+		PreparedStatement ps = null;
 		try {
 			con = dataBaseConfig.getConnection();
-			PreparedStatement ps = con.prepareStatement(DBConstants.SAVE_TICKET);
-			// ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
-			// ps.setInt(1,ticket.getId());
+			ps = con.prepareStatement(DBConstants.SAVE_TICKET);
+			// ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)			
 			ps.setInt(1, ticket.getParkingSpot().getId());
 			ps.setString(2, ticket.getVehicleRegNumber());
 			ps.setDouble(3, ticket.getPrice());
 			ps.setTimestamp(4, new Timestamp(ticket.getInTime().getTime()));
 			ps.setTimestamp(5, (ticket.getOutTime() == null) ? null : (new Timestamp(ticket.getOutTime().getTime())));
-			return ps.execute();			
-		} catch (Exception ex) {
+			return ps.execute();
+		}  catch (Exception ex) {
 			logger.error("Error fetching next available slot", ex);
-		} finally {			
+
+		} finally {	
+			dataBaseConfig.closePreparedStatement(ps);
 			dataBaseConfig.closeConnection(con);		
+
 		}
 		  return false;
 	}
 
 	public  Ticket getTicket(String vehicleRegNumber) {
 		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
 		Ticket ticket = null;
 		try {
 			con = dataBaseConfig.getConnection();
-			PreparedStatement ps = con.prepareStatement(DBConstants.GET_TICKET);
+			ps = con.prepareStatement(DBConstants.GET_TICKET);
 			// ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
 			ps.setString(1, vehicleRegNumber);
-			ResultSet rs = ps.executeQuery();
+			rs = ps.executeQuery();
 			if (rs.next()) {
 				ticket = new Ticket();
 				ParkingSpot parkingSpot = new ParkingSpot(rs.getInt(1), ParkingType.valueOf(rs.getString(6)), false);
@@ -63,12 +68,12 @@ public class TicketDAO {
 				ticket.setInTime(rs.getTimestamp(4));
 				ticket.setOutTime(rs.getTimestamp(5));
 			}
-			dataBaseConfig.closeResultSet(rs);
-			dataBaseConfig.closePreparedStatement(ps);
 		} catch (Exception ex) {
 			logger.error("Error fetching next available slot", ex);
 		} 
 		  finally {
+			dataBaseConfig.closeResultSet(rs);  
+			dataBaseConfig.closePreparedStatement(ps);  
 			dataBaseConfig.closeConnection(con);			
 		}
 		  return ticket;
@@ -76,9 +81,10 @@ public class TicketDAO {
 
 	public boolean updateTicket(Ticket ticket) {
 		Connection con = null;
+		PreparedStatement ps = null;
 		try {
 			con = dataBaseConfig.getConnection();
-			PreparedStatement ps = con.prepareStatement(DBConstants.UPDATE_TICKET);
+			ps = con.prepareStatement(DBConstants.UPDATE_TICKET);
 			ps.setDouble(1, ticket.getPrice());
 			ps.setTimestamp(2, new Timestamp(ticket.getOutTime().getTime()));
 			ps.setInt(3, ticket.getId());
@@ -87,32 +93,35 @@ public class TicketDAO {
 		} catch (Exception ex) {
 			logger.error("Error saving ticket info", ex);
 		} finally {
+			dataBaseConfig.closePreparedStatement(ps);  
 			dataBaseConfig.closeConnection(con);
 		}
 		return false;
 	}
 
 	public static ArrayList<String> countCurrentClient() throws ClassNotFoundException, SQLException {
-		ArrayList<String> numList = new ArrayList<String>();
+		ArrayList<String> numList = new ArrayList<>();
 
 		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
 		String count = null;
 		try {
 			con = dataBaseConfig.getConnection();
-			PreparedStatement ps = con.prepareStatement(DBConstants.CURRENT_CUSTOMER);
-			ResultSet rs = ps.executeQuery();
+			ps = con.prepareStatement(DBConstants.CURRENT_CUSTOMER);
+			rs = ps.executeQuery();
 			while (rs.next()) { // Position the cursor
 				count = rs.getString("VEHICLE_REG_NUMBER"); // Retrieve only the three column value
 				numList.add(count);
-
 			}
-			dataBaseConfig.closeResultSet(rs);
-			dataBaseConfig.closePreparedStatement(ps);
+
 		} catch (Exception e) {
 			logger.error("Unable to process exiting vehicle", e);
 		}
 
 		finally {
+			dataBaseConfig.closeResultSet(rs);
+			dataBaseConfig.closePreparedStatement(ps);
 			dataBaseConfig.closeConnection(con);
 
 		}

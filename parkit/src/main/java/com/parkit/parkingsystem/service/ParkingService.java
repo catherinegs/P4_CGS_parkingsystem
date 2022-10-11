@@ -9,9 +9,6 @@ import com.parkit.parkingsystem.model.Ticket;
 import com.parkit.parkingsystem.util.InputReaderUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.Date;
 import java.util.List;
 
@@ -27,9 +24,6 @@ public class ParkingService {
     private InputReaderUtil inputReaderUtil;
     private ParkingSpotDAO parkingSpotDAO;
     private  TicketDAO ticketDAO;
-    Connection con;
-    Statement stmt;
-    ResultSet rs;
 
     public ParkingService(InputReaderUtil inputReaderUtil, ParkingSpotDAO parkingSpotDAO, TicketDAO ticketDAO){
         this.inputReaderUtil = inputReaderUtil;
@@ -48,7 +42,6 @@ public class ParkingService {
             	Date inTime = new Date();
                 Ticket ticket = new Ticket();
                 //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
-                //ticket.setId(ticketID);
                 ticket.setParkingSpot(parkingSpot);
                 ticket.setVehicleRegNumber(vehicleRegNumber);
                 ticket.setPrice(0);
@@ -133,9 +126,7 @@ public class ParkingService {
 
             	}else if (freq == 1)
  
-
                 System.out.println("Please pay the parking fare:" + ticket.getPrice());
-                //intégrer méthode countOccurence
             }else{
                 System.out.println("Unable to update ticket information. Error occurred");
             }
