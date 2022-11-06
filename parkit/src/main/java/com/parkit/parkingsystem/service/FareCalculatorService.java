@@ -17,47 +17,64 @@ public void calculateFare(Ticket ticket){
         throw new IllegalArgumentException("Out time provided is incorrect:"+ticket.getOutTime().toString());
     }
     
-    int inHour = ticket.getInTime().getMinutes();
-    int outHour = ticket.getOutTime().getMinutes();
-
-    //TODO: Some tests are failing here. Need to check if this logic is correct
-    int duration = Math.abs(outHour - inHour);
-    Duration durationInHours = Duration.ofHours(duration);
-    Duration durationInMinutes = Duration.ofMinutes(duration);
-    Duration durationInDay = Duration.ofDays(duration);
-    int min1 = 30;
-    int min2 = 45;
-    int day = 1440;
     
-
-    double coef;
-    if (durationInMinutes.toMinutes() <= min1)  {
-    	 coef = durationInMinutes.toMinutes() * 0;
-    } else if (durationInMinutes.toMinutes() > min1 && durationInMinutes.toMinutes() <= min2)  {
-    	coef = durationInMinutes.toMinutes() * 0.75;
-    } else if (durationInDay.toDays() >= 1)  {
-    	coef = durationInDay.toDays() * 24.00;
-    }  else {
-    	coef = durationInHours.toHours() * 1;
-    }
-    
-
+    Long inHour = ticket.getInTime().getTime();
+    Long outHour = ticket.getOutTime().getTime();        
+    long duration = outHour - inHour;
+    long durationInMin = (duration / (60 * 1000));
+    long diffInHours = (duration / (1000 * 60 * 60));
+    long diffInDays = (duration / (1000 * 60 * 60 * 24));
+   
+    if (ticket.getParkingSpot() != null) {
+          
     switch (ticket.getParkingSpot().getParkingType()){
+    
         case CAR: {
+        	           	           	
+        	if (durationInMin <= 30) {
         		
-            	ticket.setPrice( coef * Fare.CAR_RATE_PER_HOUR);
-        	
+            	ticket.setPrice(duration *0.00 * Fare.CAR_RATE_PER_HOUR);
+            	
+        	} else if (durationInMin > 30 && durationInMin <= 45) {
+        		
+              	ticket.setPrice(0.75 * Fare.CAR_RATE_PER_HOUR);
+
+        		
+        	}  else if (duration >= 24) {
+        		
+            	ticket.setPrice(24 * diffInDays * Fare.CAR_RATE_PER_HOUR);
+
+        	} else if (diffInHours <= 23) {
+        		
+            	ticket.setPrice(1 * diffInHours * Fare.CAR_RATE_PER_HOUR);
+        	}
+    	
             break;
         }
         case BIKE: {
+        	          	
+        	if (durationInMin <= 30) {
+        		
+            	ticket.setPrice(duration * 0.00 * Fare.BIKE_RATE_PER_HOUR);
+            	
+        	} else if (durationInMin > 30 && durationInMin <= 45) {
         	
-            ticket.setPrice(coef * Fare.BIKE_RATE_PER_HOUR);
-            
+        		
+            	ticket.setPrice(0.75 * Fare.BIKE_RATE_PER_HOUR);
+
+        	}   else  {
+        		
+            	ticket.setPrice(diffInHours * 1 * Fare.BIKE_RATE_PER_HOUR);
+        	}
+        		
             break;
         }
         default: throw new IllegalArgumentException("Unkown Parking Type");
     }
- 
-  }     
+
+    }
+
+
+    }     
 
 }
