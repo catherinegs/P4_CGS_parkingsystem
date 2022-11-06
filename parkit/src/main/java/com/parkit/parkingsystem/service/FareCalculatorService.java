@@ -40,7 +40,7 @@ public void calculateFare(Ticket ticket){
               	ticket.setPrice(0.75 * Fare.CAR_RATE_PER_HOUR);
 
         		
-        	}  else if (duration >= 24) {
+        	}  else if (diffInHours >= 24) {
         		
             	ticket.setPrice(24 * diffInDays * Fare.CAR_RATE_PER_HOUR);
 

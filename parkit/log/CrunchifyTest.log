@@ -17829,3 +17829,19 @@ java.lang.Exception: Error fetching parking number from DB. Parking slots might 
 2022-11-06 20:29:56 [main] INFO  DataBaseConfig:45 - Closing Result Set
 2022-11-06 20:29:56 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
 2022-11-06 20:29:56 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-11-06 21:03:11 [main] INFO  App:10 - Initializing Parking System
+2022-11-06 21:03:11 [main] INFO  InteractiveShell:14 - App initialized!!!
+2022-11-06 21:03:18 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-11-06 21:03:19 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-11-06 21:03:19 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-11-06 21:03:19 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-11-06 21:03:19 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-11-06 21:03:19 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-11-06 21:03:19 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-11-06 21:03:19 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-11-06 21:03:19 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-11-06 21:03:19 [main] INFO  DataBaseConfig:23 - Closing DB connection
+2022-11-06 21:03:19 [main] INFO  DataBaseConfig:13 - Create DB connection
+2022-11-06 21:03:19 [main] INFO  DataBaseConfig:45 - Closing Result Set
+2022-11-06 21:03:19 [main] INFO  DataBaseConfig:34 - Closing Prepared Statement
+2022-11-06 21:03:19 [main] INFO  DataBaseConfig:23 - Closing DB connection
