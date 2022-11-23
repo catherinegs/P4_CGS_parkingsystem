@@ -68,12 +68,13 @@ public class TicketDAO {
 				ticket.setInTime(rs.getTimestamp(4));
 				ticket.setOutTime(rs.getTimestamp(5));
 			}
+
 		} catch (Exception ex) {
 			logger.error("Error fetching next available slot", ex);
 		} 
 		  finally {
 			dataBaseConfig.closeResultSet(rs);  
-			dataBaseConfig.closePreparedStatement(ps);  
+			dataBaseConfig.closePreparedStatement(ps);    
 			dataBaseConfig.closeConnection(con);			
 		}
 		  return ticket;
@@ -99,7 +100,7 @@ public class TicketDAO {
 		return false;
 	}
 
-	public static ArrayList<String> countCurrentClient() throws ClassNotFoundException, SQLException {
+	public static  ArrayList<String> countCurrentClient() throws ClassNotFoundException, SQLException {
 		ArrayList<String> numList = new ArrayList<>();
 
 		Connection con = null;
@@ -116,14 +117,13 @@ public class TicketDAO {
 			}
 
 		} catch (Exception e) {
-			logger.error("Unable to process exiting vehicle", e);
+			logger.error("Unable to count vehicle reg number", e);
 		}
 
 		finally {
 			dataBaseConfig.closeResultSet(rs);
 			dataBaseConfig.closePreparedStatement(ps);
 			dataBaseConfig.closeConnection(con);
-
 		}
 		return numList;
 

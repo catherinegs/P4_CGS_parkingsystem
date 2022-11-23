@@ -32,13 +32,13 @@ public class ParkingService {
     }
 
     public void processIncomingVehicle() {
+
         try{
             ParkingSpot parkingSpot = getNextParkingNumberIfAvailable();
             if(parkingSpot !=null && parkingSpot.getId() > 0){
                 String vehicleRegNumber = getVehicleRegNumber();
                 parkingSpot.setAvailable(false);
                 parkingSpotDAO.updateParking(parkingSpot);//allot this parking space and mark it's availability as false
-
             	Date inTime = new Date();
                 Ticket ticket = new Ticket();
                 //ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
@@ -51,6 +51,7 @@ public class ParkingService {
                 System.out.println("Generated Ticket and saved in DB");
                 System.out.println("Please park your vehicle in spot number:"+parkingSpot.getId());
                 System.out.println("Recorded in-time for vehicle number:"+vehicleRegNumber+" is:"+inTime);
+                
             }
         }catch(Exception e){
             logger.error("Unable to process incoming vehicle",e);
@@ -100,12 +101,14 @@ public class ParkingService {
         }
     }
     
+
     
     public void processExitingVehicle() {
-    	
-        try{
+
+        try{        	
             String vehicleRegNumber = getVehicleRegNumber();
             Ticket ticket = ticketDAO.getTicket(vehicleRegNumber);
+        	Date inTime = ticket.getInTime();
         	Date outTime = new Date();
             ticket.setOutTime(outTime);
             fareCalculatorService.calculateFare(ticket);
@@ -113,20 +116,20 @@ public class ParkingService {
                 ParkingSpot parkingSpot = ticket.getParkingSpot();
                 parkingSpot.setAvailable(true);
                 parkingSpotDAO.updateParking(parkingSpot);
-                System.out.println("Recorded out-time for current vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime);
-            	List<String> regNumbers = TicketDAO.countCurrentClient();
+                System.out.println("Recorded in-time for vehicle number:"+vehicleRegNumber+" is:"+inTime);
 
+                System.out.println("Recorded out-time for current vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime);
+                System.out.println("Please pay the parking fare:" + ticket.getPrice());
+                
+            	List<String> regNumbers = ticketDAO.countCurrentClient();
                 long freq = regNumbers
                 		.stream()
                 		.filter(x->x.equals(vehicleRegNumber))
                 		.count(); 
-
             	if (freq >= 2)  {
             		System.out.println("Please pay the parking fare with 5% discount for good clients:" + (ticket.getPrice() - ticket.getPrice()*5/100));
 
-            	}else if (freq == 1)
- 
-                System.out.println("Please pay the parking fare:" + ticket.getPrice());
+            	}
             }else{
                 System.out.println("Unable to update ticket information. Error occurred");
             }
