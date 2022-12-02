@@ -9,8 +9,13 @@ import com.parkit.parkingsystem.model.Ticket;
 import com.parkit.parkingsystem.util.InputReaderUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.sql.SQLException;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 
 public class ParkingService {
@@ -100,10 +105,10 @@ public class ParkingService {
             }
         }
     }
-    
-
+   
     
     public void processExitingVehicle() {
+
 
         try{        	
             String vehicleRegNumber = getVehicleRegNumber();
@@ -116,20 +121,24 @@ public class ParkingService {
                 ParkingSpot parkingSpot = ticket.getParkingSpot();
                 parkingSpot.setAvailable(true);
                 parkingSpotDAO.updateParking(parkingSpot);
-                System.out.println("Recorded in-time for vehicle number:"+vehicleRegNumber+" is:"+inTime);
+                System.out.println("Recorded in-time for vehicle number:"+ticket.getVehicleRegNumber()+" is:"+inTime);
 
                 System.out.println("Recorded out-time for current vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime);
                 System.out.println("Please pay the parking fare:" + ticket.getPrice());
-                
-            	List<String> regNumbers = ticketDAO.countCurrentClient();
+            	List<String> regNumbers = ticketDAO.getCurrentClient();
+
                 long freq = regNumbers
                 		.stream()
                 		.filter(x->x.equals(vehicleRegNumber))
                 		.count(); 
+
             	if (freq >= 2)  {
-            		System.out.println("Please pay the parking fare with 5% discount for good clients:" + (ticket.getPrice() - ticket.getPrice()*5/100));
+            		System.out.println("Please pay the parking fare with 5% discount for good clients:" + (ticket.getPrice() - ticket.getPrice()*(5/100)));
+
 
             	}
+                                        	
+        		
             }else{
                 System.out.println("Unable to update ticket information. Error occurred");
             }
@@ -138,6 +147,11 @@ public class ParkingService {
             logger.error("Unable to process exiting vehicle",e);
             } 
         }
+    
+
+    
+       
+    
 }
 
     

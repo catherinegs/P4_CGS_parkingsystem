@@ -5,6 +5,8 @@ import com.parkit.parkingsystem.constants.DBConstants;
 import com.parkit.parkingsystem.constants.ParkingType;
 import com.parkit.parkingsystem.model.ParkingSpot;
 import com.parkit.parkingsystem.model.Ticket;
+import com.parkit.parkingsystem.service.ParkingService;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.sql.Connection;
@@ -13,6 +15,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 
 public class TicketDAO {
@@ -58,7 +63,7 @@ public class TicketDAO {
 			// ID, PARKING_NUMBER, VEHICLE_REG_NUMBER, PRICE, IN_TIME, OUT_TIME)
 			ps.setString(1, vehicleRegNumber);
 			rs = ps.executeQuery();
-			if (rs.next()) {
+			while (rs.next()) {
 				ticket = new Ticket();
 				ParkingSpot parkingSpot = new ParkingSpot(rs.getInt(1), ParkingType.valueOf(rs.getString(6)), false);
 				ticket.setParkingSpot(parkingSpot);
@@ -67,7 +72,8 @@ public class TicketDAO {
 				ticket.setPrice(rs.getDouble(3));
 				ticket.setInTime(rs.getTimestamp(4));
 				ticket.setOutTime(rs.getTimestamp(5));
-			}
+			}	
+			
 
 		} catch (Exception ex) {
 			logger.error("Error fetching next available slot", ex);
@@ -100,7 +106,7 @@ public class TicketDAO {
 		return false;
 	}
 
-	public static  ArrayList<String> countCurrentClient() throws ClassNotFoundException, SQLException {
+	public static List<String>  getCurrentClient() throws ClassNotFoundException, SQLException {
 		ArrayList<String> numList = new ArrayList<>();
 
 		Connection con = null;
@@ -128,5 +134,7 @@ public class TicketDAO {
 		return numList;
 
 	}
+
+	
 
 }
