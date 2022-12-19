@@ -1,5 +1,6 @@
 package com.parkit.parkingsystem.service;
 
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.Instant;
@@ -7,6 +8,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Period;
+import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
@@ -20,22 +22,32 @@ public class FareCalculatorService {
 			throw new IllegalArgumentException("Out time provided is incorrect:" + ticket.getOutTime().toString());
 		}
 		
+		Date inTime = new Date();
+		LocalDateTime ldtInTime = LocalDateTime.ofInstant(inTime.toInstant(),
+		                                             ZoneId.systemDefault());
+		Date outTime = new Date();
+		LocalDateTime ldtOutTime = LocalDateTime.ofInstant(outTime.toInstant(),
+		                                             ZoneId.systemDefault());
+
 	    long inHour = ticket.getInTime().getTime();
 	    long outHour = ticket.getOutTime().getTime();
 	    long duration = (outHour- inHour);
 	    double hour = (double) duration/(60*60*1000);
-
-	    Duration someDuration = Duration.ofMinutes((long) (hour * 60));
-
-	    //TODO: Some tests are failing here. Need to check if this logic is correct
+	    int hourInt = (int) hour;
 	    
+	    Duration dur = Duration.between(ldtInTime, ldtOutTime);
+	    int hours = (int) dur.toHours();
+	    
+	    
+	    Duration someDuration = Duration.ofMinutes((long) (hour * 60));	    
 	    
 		Duration durationDay = Duration.ofDays(1);
 		Duration freeDuration = Duration.ofMinutes(30);
+		
 		Duration averageDuration = Duration.ofMinutes(45);
-		int result = someDuration.compareTo(freeDuration);
-		int result2 = someDuration.compareTo(averageDuration);
-		int result3 = someDuration.compareTo(durationDay);
+		int result = dur.compareTo(freeDuration);
+		int result2 = dur.compareTo(averageDuration);
+		int result3 = dur.compareTo(durationDay);
 
 		if (ticket.getParkingSpot() != null) {
 
@@ -43,11 +55,11 @@ public class FareCalculatorService {
 
 			case CAR: {
 
-				if (result <= 0) {
+				if (result < 0) {
 
 					ticket.setPrice(0.00 * Fare.CAR_RATE_PER_HOUR);
 
-				} else if (result > 0 && result2 <= 0) {
+				} else if (result >= 0 && result2 < 0) {
 
 					ticket.setPrice(0.75 * Fare.CAR_RATE_PER_HOUR);
 
@@ -57,7 +69,7 @@ public class FareCalculatorService {
 
 				} else {
 
-					ticket.setPrice(1 * hour * Fare.CAR_RATE_PER_HOUR);
+					ticket.setPrice(1 * hours * Fare.CAR_RATE_PER_HOUR);
 				}
 
 				break;
@@ -74,7 +86,7 @@ public class FareCalculatorService {
 
 				} else {
 
-					ticket.setPrice(hour * 1 * Fare.BIKE_RATE_PER_HOUR);
+					ticket.setPrice(hourInt * 1 * Fare.BIKE_RATE_PER_HOUR);
 				}
 
 				break;

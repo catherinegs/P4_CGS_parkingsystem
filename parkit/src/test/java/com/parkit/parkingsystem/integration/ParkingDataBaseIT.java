@@ -20,6 +20,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Calendar;
 import java.util.Date;
 
 @ExtendWith(MockitoExtension.class)
@@ -47,13 +52,30 @@ public class ParkingDataBaseIT {
 		ticketDAO.dataBaseConfig = dataBaseTestConfig;
 		dataBasePrepareService = new DataBasePrepareService();
 		ticket = new Ticket();
-		ticket.setId(1);
-		parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR);
-		ParkingSpot parkingSpot = parkingSpotDAO.getParkingSpot(1);
+		//ticket.setId(1);
+		int available = parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR);
+		ParkingSpot parkingSpot = parkingSpotDAO.getParkingSpot(available);
 		ticket.setParkingSpot(parkingSpot);
 		ticket.setVehicleRegNumber("21");
-		Date inTime = new Date(2022, 06, 8, 17, 22, 17);
-		ticket.setInTime(inTime);
+		//Date inTime = new Date();
+		Date date = new Date();
+		ZoneId defaultZoneId = ZoneId.systemDefault();
+	    LocalDate inTime = LocalDate.of(2022, 12, 12);
+	    LocalDate oneDaysBehind = inTime.minusDays(1);
+        Date dateDay = Date.from(oneDaysBehind.atStartOfDay(defaultZoneId).toInstant());
+
+        // Convert Date to Calendar
+        //Calendar c = Calendar.getInstance();
+        //c.setTime(inTime);
+
+        // Perform addition/subtraction
+
+        //c.add(Calendar.DATE, 1);
+
+
+        // Convert calendar back to Date
+        //date = c.getTime();
+		ticket.setInTime(dateDay);
 		ticketDAO.saveTicket(ticket);
 
 	}
@@ -84,7 +106,7 @@ public class ParkingDataBaseIT {
 
 		Ticket ticket1 = ticketDAO.getTicket("21");
 
-		ticket1.inTime = new Date("2022/06/08-17:22:17");
+		ticket1.inTime = new Date();
 
 		ticketDAO.saveTicket(ticket1);
 
@@ -107,8 +129,10 @@ public class ParkingDataBaseIT {
 		parkingService.processExitingVehicle();
 
 		Ticket ticket1 = ticketDAO.getTicket("21");
+		ticket1.inTime = new Date();
+		
 
-		ticket1.outTime = new Date("2022/07/13-19:50:02");
+
 
 		ticketDAO.updateTicket(ticket1);
 

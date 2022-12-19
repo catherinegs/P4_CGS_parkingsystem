@@ -124,17 +124,20 @@ public class ParkingService {
                 System.out.println("Recorded in-time for vehicle number:"+ticket.getVehicleRegNumber()+" is:"+inTime);
 
                 System.out.println("Recorded out-time for current vehicle number:" + ticket.getVehicleRegNumber() + " is:" + outTime);
-                System.out.println("Please pay the parking fare:" + ticket.getPrice());
             	List<String> regNumbers = ticketDAO.getCurrentClient();
 
                 long freq = regNumbers
                 		.stream()
                 		.filter(x->x.equals(vehicleRegNumber))
                 		.count(); 
+                float discount= 5/100;
 
             	if (freq >= 2)  {
-            		System.out.println("Please pay the parking fare with 5% discount for good clients:" + (ticket.getPrice() - ticket.getPrice()*(5/100)));
+            		System.out.println("Please pay the parking fare with 5% discount for good clients:" + (ticket.getPrice() - ticket.getPrice()*discount));
 
+
+            	} else  if (freq == 1) {
+                    System.out.println("Please pay the parking fare:" + ticket.getPrice());
 
             	}
                                         	
