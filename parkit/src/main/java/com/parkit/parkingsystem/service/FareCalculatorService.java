@@ -37,7 +37,7 @@ public class FareCalculatorService {
 	    
 	    Duration dur = Duration.between(ldtInTime, ldtOutTime);
 	    int hours = (int) dur.toHours();
-	    
+	    int minu = (int) dur.toMinutes();
 	    
 	    Duration someDuration = Duration.ofMinutes((long) (hour * 60));	    
 	    

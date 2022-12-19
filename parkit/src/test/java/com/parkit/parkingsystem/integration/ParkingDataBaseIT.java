@@ -60,7 +60,7 @@ public class ParkingDataBaseIT {
 		//Date inTime = new Date();
 		Date date = new Date();
 		ZoneId defaultZoneId = ZoneId.systemDefault();
-	    LocalDate inTime = LocalDate.of(2022, 12, 12);
+	    LocalDate inTime = LocalDate.now();
 	    LocalDate oneDaysBehind = inTime.minusDays(1);
         Date dateDay = Date.from(oneDaysBehind.atStartOfDay(defaultZoneId).toInstant());
 
@@ -128,18 +128,18 @@ public class ParkingDataBaseIT {
 
 		parkingService.processExitingVehicle();
 
-		Ticket ticket1 = ticketDAO.getTicket("21");
-		ticket1.inTime = new Date();
+		Ticket ticket = ticketDAO.getTicket("21");
+		//ticket1.inTime = new Date();
 		
 
 
 
-		ticketDAO.updateTicket(ticket1);
+		//ticketDAO.updateTicket(ticket1);
 
 		// check that the fare generated and out time are populated correctly in the
 		// database
 
-		assertEquals((36), ticket1.getPrice());
+		assertEquals((36), ticket.getPrice());
 
 	}
 
