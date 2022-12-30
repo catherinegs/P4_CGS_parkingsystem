@@ -10,7 +10,10 @@ import java.time.LocalTime;
 import java.time.Period;
 import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.Temporal;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import com.parkit.parkingsystem.constants.Fare;
 import com.parkit.parkingsystem.model.Ticket;
@@ -21,33 +24,19 @@ public class FareCalculatorService {
 		if ((ticket.getOutTime() == null) || (ticket.getOutTime().before(ticket.getInTime()))) {
 			throw new IllegalArgumentException("Out time provided is incorrect:" + ticket.getOutTime().toString());
 		}
-		
-		Date inTime = new Date();
-		LocalDateTime ldtInTime = LocalDateTime.ofInstant(inTime.toInstant(),
-		                                             ZoneId.systemDefault());
-		Date outTime = new Date();
-		LocalDateTime ldtOutTime = LocalDateTime.ofInstant(outTime.toInstant(),
-		                                             ZoneId.systemDefault());
 
-	    long inHour = ticket.getInTime().getTime();
-	    long outHour = ticket.getOutTime().getTime();
-	    long duration = (outHour- inHour);
-	    double hour = (double) duration/(60*60*1000);
-	    int hourInt = (int) hour;
-	    
-	    Duration dur = Duration.between(ldtInTime, ldtOutTime);
-	    int hours = (int) dur.toHours();
-	    int minu = (int) dur.toMinutes();
-	    
-	    Duration someDuration = Duration.ofMinutes((long) (hour * 60));	    
-	    
-		Duration durationDay = Duration.ofDays(1);
-		Duration freeDuration = Duration.ofMinutes(30);
-		
-		Duration averageDuration = Duration.ofMinutes(45);
-		int result = dur.compareTo(freeDuration);
-		int result2 = dur.compareTo(averageDuration);
-		int result3 = dur.compareTo(durationDay);
+		long inHour = ticket.getInTime().getTime();
+		long outHour = ticket.getOutTime().getTime();
+
+		// TODO: Some tests are failing here. Need to check if this logic is correct
+
+		long difference_In_Time = outHour - inHour;
+
+
+		long difference_In_Seconds = TimeUnit.MILLISECONDS.toSeconds(difference_In_Time) % 60;
+		long difference_In_Minutes = TimeUnit.MILLISECONDS.toMinutes(difference_In_Time) % 60;
+		long difference_In_Hours = TimeUnit.MILLISECONDS.toHours(difference_In_Time) % 24;
+		long difference_In_Days = TimeUnit.MILLISECONDS.toDays(difference_In_Time) % 365;
 
 		if (ticket.getParkingSpot() != null) {
 
@@ -55,38 +44,38 @@ public class FareCalculatorService {
 
 			case CAR: {
 
-				if (result < 0) {
+				if (difference_In_Time <= 1800000) {
 
 					ticket.setPrice(0.00 * Fare.CAR_RATE_PER_HOUR);
 
-				} else if (result >= 0 && result2 < 0) {
+				} else if (difference_In_Time > 1800000 && difference_In_Time <= 2700000) {
 
 					ticket.setPrice(0.75 * Fare.CAR_RATE_PER_HOUR);
 
-				} else if (result3 == 0) {
+				} else if (difference_In_Time == 86400000) {
 
 					ticket.setPrice(24 * Fare.CAR_RATE_PER_HOUR);
 
 				} else {
 
-					ticket.setPrice(1 * hours * Fare.CAR_RATE_PER_HOUR);
+					ticket.setPrice(1 * difference_In_Hours * Fare.CAR_RATE_PER_HOUR);
 				}
 
 				break;
 			}
 			case BIKE: {
 
-				if (result <= 0) {
+				if (difference_In_Time <= 1800000) {
 
 					ticket.setPrice(0.00 * Fare.BIKE_RATE_PER_HOUR);
 
-				} else if (result > 0 && result2 <= 0) {
+				} else if (difference_In_Time > 1800000 && difference_In_Time <= 2700000) {
 
 					ticket.setPrice(0.75 * Fare.BIKE_RATE_PER_HOUR);
 
 				} else {
 
-					ticket.setPrice(hourInt * 1 * Fare.BIKE_RATE_PER_HOUR);
+					ticket.setPrice(difference_In_Hours * 1 * Fare.BIKE_RATE_PER_HOUR);
 				}
 
 				break;
