@@ -58,24 +58,12 @@ public class ParkingDataBaseIT {
 		ticket.setParkingSpot(parkingSpot);
 		ticket.setVehicleRegNumber("21");
 		//Date inTime = new Date();
-		Date date = new Date();
+		Date inTime = new Date();
 		ZoneId defaultZoneId = ZoneId.systemDefault();
-	    LocalDate inTime = LocalDate.now();
-	    LocalDate oneDaysBehind = inTime.minusDays(1);
-        Date dateDay = Date.from(oneDaysBehind.atStartOfDay(defaultZoneId).toInstant());
-
-        // Convert Date to Calendar
-        //Calendar c = Calendar.getInstance();
-        //c.setTime(inTime);
-
-        // Perform addition/subtraction
-
-        //c.add(Calendar.DATE, 1);
-
-
-        // Convert calendar back to Date
-        //date = c.getTime();
-		ticket.setInTime(dateDay);
+	    LocalDateTime inTime1 = inTime.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+	    LocalDateTime oneDaysAfter = inTime1.plusDays(1);
+        Date inTime2 = Date.from(oneDaysAfter.atZone(ZoneId.systemDefault()).toInstant());;
+		ticket.setInTime(inTime2);
 		ticketDAO.saveTicket(ticket);
 
 	}
@@ -125,16 +113,30 @@ public class ParkingDataBaseIT {
 		testParkingACar();
 
 		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
+		
+		ticket = ticketDAO.getTicket("21");
+
+        
+		ticket.getInTime();
+		
+		Date outTime= new Date();
+
+
 
 		parkingService.processExitingVehicle();
 
-		Ticket ticket = ticketDAO.getTicket("21");
-		//ticket1.inTime = new Date();
+        
+		ticket.setOutTime(outTime);
+
+
+
+	
+
 		
 
 
 
-		//ticketDAO.updateTicket(ticket1);
+		ticketDAO.updateTicket(ticket);
 
 		// check that the fare generated and out time are populated correctly in the
 		// database
