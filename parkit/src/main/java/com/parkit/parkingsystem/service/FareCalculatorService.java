@@ -25,16 +25,14 @@ public class FareCalculatorService {
 			throw new IllegalArgumentException("Out time provided is incorrect:" + ticket.getOutTime().toString());
 		}
 
-		long inHour = ticket.getInTime().getTime();
-		long outHour = ticket.getOutTime().getTime();
+		Long inHour = ticket.getInTime().getTime();
+		Long outHour = ticket.getOutTime().getTime();
 
-		long difference_In_Time = outHour - inHour;
+		Long difference_In_Time = outHour - inHour;
 
 
-		long difference_In_Seconds = TimeUnit.MILLISECONDS.toSeconds(difference_In_Time) % 60;
-		long difference_In_Minutes = TimeUnit.MILLISECONDS.toMinutes(difference_In_Time) % 60;
-		long difference_In_Hours = TimeUnit.MILLISECONDS.toHours(difference_In_Time) % 24;
-		long difference_In_Days = TimeUnit.MILLISECONDS.toDays(difference_In_Time) % 365;
+		Long difference_In_Minutes = TimeUnit.MILLISECONDS.toMinutes(difference_In_Time);
+		float difference_In_Hours = difference_In_Minutes.floatValue() / 60.0f;
 
 		if (ticket.getParkingSpot() != null) {
 
@@ -42,19 +40,11 @@ public class FareCalculatorService {
 
 			case CAR: {
 
-				if (difference_In_Time <= 1800000) {
+				if (difference_In_Hours <= 0.5) {
 
 					ticket.setPrice(0.00 * Fare.CAR_RATE_PER_HOUR);
 
-				} else if (difference_In_Time > 1800000 && difference_In_Time <= 2700000) {
-
-					ticket.setPrice(0.75 * Fare.CAR_RATE_PER_HOUR);
-
-				} else if (difference_In_Time >= 86400000) {
-
-					ticket.setPrice(24 * Fare.CAR_RATE_PER_HOUR);
-
-				} else {
+				}  else {
 
 					ticket.setPrice(1 * difference_In_Hours * Fare.CAR_RATE_PER_HOUR);
 				}
@@ -63,15 +53,11 @@ public class FareCalculatorService {
 			}
 			case BIKE: {
 
-				if (difference_In_Time <= 1800000) {
+				if (difference_In_Hours <= 0.5) {
 
 					ticket.setPrice(0.00 * Fare.BIKE_RATE_PER_HOUR);
 
-				} else if (difference_In_Time > 1800000 && difference_In_Time <= 2700000) {
-
-					ticket.setPrice(0.75 * Fare.BIKE_RATE_PER_HOUR);
-
-				} else {
+				}  else {
 
 					ticket.setPrice(difference_In_Hours * 1 * Fare.BIKE_RATE_PER_HOUR);
 				}

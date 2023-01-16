@@ -111,21 +111,18 @@ public class ParkingDataBaseIT {
 		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
 		
 		ticket = ticketDAO.getTicket("77");
+				
+		Date inTime = ticket.getInTime();
+
+		
+		inTime.setTime( System.currentTimeMillis() - (  24 * 60 * 60 * 1000) );
+		
+
+
 
 		parkingService.processExitingVehicle();
 		
-		Date inTime = ticket.getInTime();
-		
-		ZoneId defaultZoneId = ZoneId.systemDefault();
-	    LocalDateTime inTime1 = inTime.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
-	    LocalDateTime oneDaysBehind = inTime1.minusDays(1);
-        Date outTime = Date.from(oneDaysBehind.atZone(ZoneId.systemDefault()).toInstant());;
 
-
-
-
-
-		//ticketDAO.updateTicket(ticket);
 
 		// check that the fare generated and out time are populated correctly in the
 		// database
