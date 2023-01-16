@@ -56,14 +56,10 @@ public class ParkingDataBaseIT {
 		int available = parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR);
 		ParkingSpot parkingSpot = parkingSpotDAO.getParkingSpot(available);
 		ticket.setParkingSpot(parkingSpot);
-		ticket.setVehicleRegNumber("21");
+		ticket.setVehicleRegNumber("77");
 		//Date inTime = new Date();
 		Date inTime = new Date();
-		ZoneId defaultZoneId = ZoneId.systemDefault();
-	    LocalDateTime inTime1 = inTime.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
-	    LocalDateTime oneDaysAfter = inTime1.plusDays(1);
-        Date inTime2 = Date.from(oneDaysAfter.atZone(ZoneId.systemDefault()).toInstant());;
-		ticket.setInTime(inTime2);
+		ticket.setInTime(inTime);
 		ticketDAO.saveTicket(ticket);
 
 	}
@@ -71,7 +67,7 @@ public class ParkingDataBaseIT {
 	@BeforeEach
 	private void setUpPerTest() throws Exception {
 		when(inputReaderUtil.readSelection()).thenReturn(1);
-		when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn("21");
+		when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn("77");
 		dataBasePrepareService.clearDataBaseEntries();
 	}
 
@@ -90,9 +86,9 @@ public class ParkingDataBaseIT {
 
 		// check that a ticket is actualy saved in DB
 
-		assertNotNull(ticketDAO.getTicket("21"));
+		assertNotNull(ticketDAO.getTicket("77"));
 
-		Ticket ticket1 = ticketDAO.getTicket("21");
+		Ticket ticket1 = ticketDAO.getTicket("77");
 
 		ticket1.inTime = new Date();
 
@@ -114,29 +110,22 @@ public class ParkingDataBaseIT {
 
 		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
 		
-		ticket = ticketDAO.getTicket("21");
-
-        
-		ticket.getInTime();
-		
-		Date outTime= new Date();
-
-
+		ticket = ticketDAO.getTicket("77");
 
 		parkingService.processExitingVehicle();
-
-        
-		ticket.setOutTime(outTime);
-
-
-
-	
-
 		
+		Date inTime = ticket.getInTime();
+		
+		ZoneId defaultZoneId = ZoneId.systemDefault();
+	    LocalDateTime inTime1 = inTime.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+	    LocalDateTime oneDaysBehind = inTime1.minusDays(1);
+        Date outTime = Date.from(oneDaysBehind.atZone(ZoneId.systemDefault()).toInstant());;
 
 
 
-		ticketDAO.updateTicket(ticket);
+
+
+		//ticketDAO.updateTicket(ticket);
 
 		// check that the fare generated and out time are populated correctly in the
 		// database

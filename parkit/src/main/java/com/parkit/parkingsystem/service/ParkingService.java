@@ -130,10 +130,9 @@ public class ParkingService {
                 		.stream()
                 		.filter(x->x.equals(vehicleRegNumber))
                 		.count(); 
-                float discount= 5/100;
 
             	if (freq >= 2)  {
-            		System.out.println("Please pay the parking fare with 5% discount for good clients:" + (ticket.getPrice() - ticket.getPrice()*discount));
+            		System.out.println("Please pay the parking fare with 5% discount for good clients:" + (ticket.getPrice() - ticket.getPrice()*5/100));
 
 
             	} else  if (freq == 1) {

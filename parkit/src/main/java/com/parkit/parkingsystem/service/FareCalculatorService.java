@@ -50,7 +50,7 @@ public class FareCalculatorService {
 
 					ticket.setPrice(0.75 * Fare.CAR_RATE_PER_HOUR);
 
-				} else if (difference_In_Time == 86400000) {
+				} else if (difference_In_Time >= 86400000) {
 
 					ticket.setPrice(24 * Fare.CAR_RATE_PER_HOUR);
 
