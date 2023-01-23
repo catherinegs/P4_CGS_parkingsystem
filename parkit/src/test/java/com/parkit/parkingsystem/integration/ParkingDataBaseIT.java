@@ -57,8 +57,8 @@ public class ParkingDataBaseIT {
 		ParkingSpot parkingSpot = parkingSpotDAO.getParkingSpot(available);
 		ticket.setParkingSpot(parkingSpot);
 		ticket.setVehicleRegNumber("77");
-		//Date inTime = new Date();
 		Date inTime = new Date();
+		//Date inTime = new Date(2023,01,14,19,03,43);
 		ticket.setInTime(inTime);
 		ticketDAO.saveTicket(ticket);
 
@@ -111,16 +111,34 @@ public class ParkingDataBaseIT {
 		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
 		
 		ticket = ticketDAO.getTicket("77");
-				
-		Date inTime = ticket.getInTime();
-
 		
-		inTime.setTime( System.currentTimeMillis() - (  24 * 60 * 60 * 1000) );
+		//long inTime = System.currentTimeMillis() - (  24 * 60 * 60 * 1000); 
 		
 
+
+		Date inTime = ticket.getInTime();	
+		Date outTime = new Date(inTime.getTime() + (1000 * 60 * 60 * 24));
+
+		
+		
+		//Date inTime = new Date(new Date("2023-01-14 19:03:43.0").getTime() - 86400000);
+		//Date inTime = new Date(new Date(2023,01,14,19,03,43).getTime() - (1000 * 60 * 60 * 24));
+		
+		
+		//Date outTime = new Date();
+
+		
+		//LocalDateTime.from(inTime.toInstant().atZone(ZoneId.of("UTC"))).plusDays(1);
+		
+		//LocalDateTime.from(inTime.toInstant()).plusDays(1);
+		
+		ticketDAO.updateTicket(ticket);
+
+		
 
 
 		parkingService.processExitingVehicle();
+		
 		
 
 
