@@ -52,7 +52,7 @@ public class TicketDAO {
 		  return false;
 	}
 
-	public  Ticket getTicket(String vehicleRegNumber) {
+	public Ticket getTicket(String vehicleRegNumber) {
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;

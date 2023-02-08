@@ -9,6 +9,8 @@ import com.parkit.parkingsystem.model.ParkingSpot;
 import com.parkit.parkingsystem.model.Ticket;
 import com.parkit.parkingsystem.service.ParkingService;
 import com.parkit.parkingsystem.util.InputReaderUtil;
+
+import org.apache.commons.lang.time.DateFormatUtils;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,6 +23,9 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 
+import java.time.Clock;
+import java.time.Duration;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -56,18 +61,28 @@ public class ParkingDataBaseIT {
 		int available = parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR);
 		ParkingSpot parkingSpot = parkingSpotDAO.getParkingSpot(available);
 		ticket.setParkingSpot(parkingSpot);
-		ticket.setVehicleRegNumber("77");
-		Date inTime = new Date();
-		//Date inTime = new Date(2023,01,14,19,03,43);
-		ticket.setInTime(inTime);
+		ticket.setVehicleRegNumber("77");	
+		//Instant now = Instant.now(); //current date
+		//Instant before = now.minus(Duration.ofHours(5));
+		//Date inTime = Date.from(before);
+		Date today = new Date();
+	    ZoneId defaultZoneId = ZoneId.systemDefault();
+	    LocalDateTime inTime1 = today.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+	    LocalDateTime hoursBehind = inTime1.minusHours(5);
+        Date inTime = Date.from(hoursBehind.atZone(ZoneId.systemDefault()).toInstant());;
+		ticket.setInTime(inTime);		
 		ticketDAO.saveTicket(ticket);
 
 	}
+	
+	Date inTime = ticket.getInTime();
+
 
 	@BeforeEach
 	private void setUpPerTest() throws Exception {
 		when(inputReaderUtil.readSelection()).thenReturn(1);
 		when(inputReaderUtil.readVehicleRegistrationNumber()).thenReturn("77");
+		//Instant.now(Clock.fixed(inTime));
 		dataBasePrepareService.clearDataBaseEntries();
 	}
 
@@ -83,20 +98,30 @@ public class ParkingDataBaseIT {
 		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
 
 		parkingService.processIncomingVehicle();
+		Instant now = Instant.now(); //current date
+		Instant before = now.minus(Duration.ofHours(5));
+		Date inTime = Date.from(before);
+		//Date today = new Date();
+		//ZoneId defaultZoneId = ZoneId.systemDefault();
+	    //LocalDateTime inTime1 = today.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+	    //LocalDateTime hoursBehind = inTime1.minusHours(5);
+        //Date inTime = Date.from(hoursBehind.atZone(ZoneId.systemDefault()).toInstant());;
+		ticket.setInTime(inTime);		
 
+
+
+		//ticket = ticketDAO.getTicket("77");
+
+		ticketDAO.saveTicket(ticket);
+		System.out.println(ticket.getInTime()+ "!!!!!!!");
+		
 		// check that a ticket is actualy saved in DB
 
 		assertNotNull(ticketDAO.getTicket("77"));
 
-		Ticket ticket1 = ticketDAO.getTicket("77");
-
-		ticket1.inTime = new Date();
-
-		ticketDAO.saveTicket(ticket1);
-
 		// check that Parking table is updated with availability
 
-		ParkingSpot parkingSpot1 = ticket1.getParkingSpot();
+		ParkingSpot parkingSpot1 = ticket.getParkingSpot();
 
 		assertFalse(parkingSpot1.isAvailable());
 
@@ -105,39 +130,41 @@ public class ParkingDataBaseIT {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testParkingLotExit() {
+		
+
 
 		testParkingACar();
 
 		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
-		
-		ticket = ticketDAO.getTicket("77");
-		
+	
 		//long inTime = System.currentTimeMillis() - (  24 * 60 * 60 * 1000); 
+		ticket.getInTime();		
+
 		
 
 
-		Date inTime = ticket.getInTime();	
-		Date outTime = new Date(inTime.getTime() + (1000 * 60 * 60 * 24));
+		//Date outTime = new Date(inTime.getTime() - (1000 * 60 * 60 * 24));
 
 		
 		
 		//Date inTime = new Date(new Date("2023-01-14 19:03:43.0").getTime() - 86400000);
-		//Date inTime = new Date(new Date(2023,01,14,19,03,43).getTime() - (1000 * 60 * 60 * 24));
+		//ticket.setInTime(new Date(new Date(2023,01,14,19,03,43).getTime() - (1000 * 60 * 60 * 24)));
 		
 		
-		//Date outTime = new Date();
 
-		
 		//LocalDateTime.from(inTime.toInstant().atZone(ZoneId.of("UTC"))).plusDays(1);
 		
 		//LocalDateTime.from(inTime.toInstant()).plusDays(1);
 		
-		ticketDAO.updateTicket(ticket);
-
+		//ticketDAO.updateTicket(ticket);
 		
 
-
 		parkingService.processExitingVehicle();
+
+		
+		System.out.println(ticket.getInTime()+ "!!!!!!!");
+		
+		System.out.println(ticket.getPrice());
 		
 		
 
@@ -145,7 +172,7 @@ public class ParkingDataBaseIT {
 		// check that the fare generated and out time are populated correctly in the
 		// database
 
-		assertEquals((36), ticket.getPrice());
+		assertEquals((5*1.5), ticket.getPrice());
 
 	}
 
