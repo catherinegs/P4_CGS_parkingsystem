@@ -46,10 +46,10 @@ public class ParkingDataBaseIT {
 	private static DataBasePrepareService dataBasePrepareService;
 
 	private static Ticket ticket;
-	
-    @Mock
+
+	@Mock
 	private static InputReaderUtil inputReaderUtil;
-	
+
 	@SuppressWarnings({ "deprecation", "static-access" })
 	@BeforeAll
 	private static void setUp() throws Exception {
@@ -62,16 +62,16 @@ public class ParkingDataBaseIT {
 		int available = parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR);
 		ParkingSpot parkingSpot = parkingSpotDAO.getParkingSpot(available);
 		ticket.setParkingSpot(parkingSpot);
-		ticket.setVehicleRegNumber("77");	
+		ticket.setVehicleRegNumber("77");
 		Date today = new Date();
-	    ZoneId defaultZoneId = ZoneId.systemDefault();
-	    LocalDateTime inTime1 = today.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
-	    LocalDateTime hoursBehind = inTime1.minusHours(5);
-        Date inTime = Date.from(hoursBehind.atZone(ZoneId.systemDefault()).toInstant());;
-		ticket.setInTime(inTime);		
+		ZoneId defaultZoneId = ZoneId.systemDefault();
+		LocalDateTime inTime1 = today.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+		LocalDateTime hoursBehind = inTime1.minusHours(5);
+		Date inTime = Date.from(hoursBehind.atZone(ZoneId.systemDefault()).toInstant());
+		ticket.setInTime(inTime);
 		ticketDAO.saveTicket(ticket);
-        System.out.println("Recorded in-time for vehicle number:"+ticket.getVehicleRegNumber()+" is:"+inTime);
-	}	
+		System.out.println("Recorded in-time for vehicle number:" + ticket.getVehicleRegNumber() + " is:" + inTime);
+	}
 
 	@BeforeEach
 	private void setUpPerTest() throws Exception {
@@ -93,7 +93,7 @@ public class ParkingDataBaseIT {
 		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
 
 		parkingService.processIncomingVehicle();
-		
+
 		// check that a ticket is actually saved in DB
 
 		assertNotNull(ticketDAO.getTicket("77"));
@@ -102,7 +102,7 @@ public class ParkingDataBaseIT {
 
 		ParkingSpot parkingSpot1 = ticket.getParkingSpot();
 
-		assertFalse(parkingSpot1.isAvailable());		
+		assertFalse(parkingSpot1.isAvailable());
 
 	}
 
@@ -113,15 +113,15 @@ public class ParkingDataBaseIT {
 		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
 
 		parkingService.processExitingVehicle();
-									
+
 		System.out.println(ticket.getPrice());
-		
-        Ticket ticket3 = ticketDAO.getTicket("77");
+
+		Ticket ticket3 = ticketDAO.getTicket("77");
 
 		// check that the fare generated and out time are populated correctly in the
 		// database
 
-		assertEquals((5*1.5), ticket3.getPrice());
+		assertEquals((5 * 1.5), ticket3.getPrice());
 
 	}
 
