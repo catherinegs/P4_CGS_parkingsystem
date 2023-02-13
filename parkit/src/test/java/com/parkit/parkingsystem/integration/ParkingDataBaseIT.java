@@ -59,14 +59,10 @@ public class ParkingDataBaseIT {
 		ticketDAO.dataBaseConfig = dataBaseTestConfig;
 		dataBasePrepareService = new DataBasePrepareService();
 		ticket = new Ticket();
-		//ticket.setId(1);
 		int available = parkingSpotDAO.getNextAvailableSlot(ParkingType.CAR);
 		ParkingSpot parkingSpot = parkingSpotDAO.getParkingSpot(available);
 		ticket.setParkingSpot(parkingSpot);
 		ticket.setVehicleRegNumber("77");	
-		//Instant now = Instant.now(); //current date
-		//Instant before = now.minus(Duration.ofHours(5));
-		//Date inTime = Date.from(before);
 		Date today = new Date();
 	    ZoneId defaultZoneId = ZoneId.systemDefault();
 	    LocalDateTime inTime1 = today.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
@@ -75,11 +71,7 @@ public class ParkingDataBaseIT {
 		ticket.setInTime(inTime);		
 		ticketDAO.saveTicket(ticket);
         System.out.println("Recorded in-time for vehicle number:"+ticket.getVehicleRegNumber()+" is:"+inTime);
-
-
-	}
-	
-
+	}	
 
 	@BeforeEach
 	private void setUpPerTest() throws Exception {
@@ -92,26 +84,17 @@ public class ParkingDataBaseIT {
 	private static void tearDown() {
 		dataBasePrepareService.clearDataBaseEntries();
 
-
 	}
-
 
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testParkingACar() {
 
 		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
-		
-		//ParkingType ParkingType = ticket.getParkingSpot();
-
-
-
 
 		parkingService.processIncomingVehicle();
-
-		System.out.println(ticket.getInTime()+ "!!!!!!!");
 		
-		// check that a ticket is actualy saved in DB
+		// check that a ticket is actually saved in DB
 
 		assertNotNull(ticketDAO.getTicket("77"));
 
@@ -119,50 +102,20 @@ public class ParkingDataBaseIT {
 
 		ParkingSpot parkingSpot1 = ticket.getParkingSpot();
 
-		assertFalse(parkingSpot1.isAvailable());
-		
+		assertFalse(parkingSpot1.isAvailable());		
 
 	}
 
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testParkingLotExit() {
-		
-
-		//testParkingACar();
 
 		ParkingService parkingService = new ParkingService(inputReaderUtil, parkingSpotDAO, ticketDAO);
 
-
-
-    	//Date outTime = new Date();
-    	//ticket.setOutTime(outTime);
-
 		parkingService.processExitingVehicle();
-		
-		//Date inTime = new Date();
-	   // ZoneId defaultZoneId = ZoneId.systemDefault();
-	   // LocalDateTime inTime1 = inTime.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
-	   // LocalDateTime hoursBehind = inTime1.minusHours(5);
-       // Date inTime2 = Date.from(hoursBehind.atZone(ZoneId.systemDefault()).toInstant());;
-		//ticket.setInTime(inTime2);		
-
-		
-		//assertEquals((inTime), ticket.getInTime());
-		//ticketDAO.updateTicket(ticket);
-
-
-
-
-
-		
-		System.out.println(ticket.getInTime()+ "!!!!!!!");
-		
-		
-		
+									
 		System.out.println(ticket.getPrice());
 		
-		double s = ticket.getPrice();
         Ticket ticket3 = ticketDAO.getTicket("77");
 
 		// check that the fare generated and out time are populated correctly in the

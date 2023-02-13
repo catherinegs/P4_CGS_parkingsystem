@@ -28,11 +28,11 @@ public class FareCalculatorService {
 		Long inHour = ticket.getInTime().getTime();
 		Long outHour = ticket.getOutTime().getTime();
 
-		Long difference_In_Time = outHour - inHour;
+		Long diff = outHour - inHour;
 
 
-		Long difference_In_Minutes = TimeUnit.MILLISECONDS.toMinutes(difference_In_Time);
-		float difference_In_Hours = difference_In_Minutes.floatValue() / 60.0f;
+		Long diffMinutes = TimeUnit.MILLISECONDS.toMinutes(diff);
+		float diffHours = diffMinutes.floatValue() / 60.0f;
 
 		if (ticket.getParkingSpot() != null) {
 
@@ -40,26 +40,26 @@ public class FareCalculatorService {
 
 			case CAR: {
 
-				if (difference_In_Hours <= 0.5) {
+				if (diffHours <= 0.5) {
 
 					ticket.setPrice(0.00 * Fare.CAR_RATE_PER_HOUR);
 
 				}  else {
 
-					ticket.setPrice(1 * difference_In_Hours * Fare.CAR_RATE_PER_HOUR);
+					ticket.setPrice(1 * diffHours * Fare.CAR_RATE_PER_HOUR);
 				}
 
 				break;
 			}
 			case BIKE: {
 
-				if (difference_In_Hours <= 0.5) {
+				if (diffHours <= 0.5) {
 
 					ticket.setPrice(0.00 * Fare.BIKE_RATE_PER_HOUR);
 
 				}  else {
 
-					ticket.setPrice(difference_In_Hours * 1 * Fare.BIKE_RATE_PER_HOUR);
+					ticket.setPrice(diffHours * 1 * Fare.BIKE_RATE_PER_HOUR);
 				}
 
 				break;
